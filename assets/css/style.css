@@ -3966,9 +3966,7 @@ blockquote:before {
 .main-arrow-cover .main-slide-arrow .slick-arrow.slick-arrow-next {
   padding-left: 2px;
 }
-.main-slider-two {
-  background: linear-gradient(124.13deg, #23033c -25.14%, #2ccfbb 78.68%);
-}
+
 .main-slider-two .slider-track {
   -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
   transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
@@ -3976,6 +3974,9 @@ blockquote:before {
 .main-slide-two {
   color: #fcf9ed;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-slide-two .img-slide {
   position: absolute;
