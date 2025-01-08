@@ -2834,7 +2834,7 @@ footer h6 {
   z-index: 2;
 }
 .history-info-cover .history-info {
-  border-bottom: 1px solid #dfdfdf;
+  /* border-bottom: 1px solid #dfdfdf; */
   padding: 31px 0 34px;
 }
 .history-info-cover .history-info:first-child {
@@ -4391,7 +4391,7 @@ blockquote:before {
   padding-top: 10px;
 }
 .s-pricing .pricing-item {
-  width: calc(25% - 20px);
+  width: calc(30% - 20px);
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
