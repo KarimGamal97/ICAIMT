@@ -89,6 +89,7 @@ video {
 }
 html {
   line-height: 1;
+  scroll-behavior: smooth;
 }
 ol,
 ul {
@@ -6184,5 +6185,213 @@ blockquote:before {
   }
   .s-pravicy-policy h3 {
     font-size: 20px;
+  }
+}
+
+/*  Table */
+#second_blk .table {
+  margin-bottom: 50px;
+}
+#second_blk .table h3 {
+  font-weight: 900;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#second_blk .table table {
+  width: 100%;
+}
+#second_blk .table table thead {
+  background: #000;
+  color: #fff;
+}
+#second_blk .table table thead tr th {
+  padding: 15px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+  border: 1px solid #fff;
+}
+#second_blk .table table thead tr th:first-child {
+  text-align: left;
+}
+#second_blk .table table tbody tr {
+  border-bottom: 1px solid #e7e7e7;
+  text-align: center;
+  background: #fff;
+}
+#second_blk .table table tbody .rate {
+  color: #000 !important;
+  font-weight: 600;
+  background: #2ccfbb;
+}
+#second_blk .table table tbody tr td {
+  padding: 15px 20px;
+}
+#second_blk .table table tbody tr td.mark {
+  background: url(../img/mark.png) no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td.wrong {
+  background: url(../img/wrong.png) no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
+#second_blk .table table tbody tr td:nth-child(2) {
+  background: #2ccfbb;
+}
+#second_blk .table table tbody tr td:nth-child(2).mark {
+  background: url(../img/mark.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:nth-child(2).wrong {
+  background: url(../img/wrong.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:nth-child(4) {
+  background: #2ccfbb;
+}
+#second_blk .table table tbody tr td:nth-child(4).mark {
+  background: url(../img/mark.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:nth-child(4).wrong {
+  background: url(../img/wrong.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:nth-child(6) {
+  background: #2ccfbb;
+}
+#second_blk .table table tbody tr td:nth-child(6).mark {
+  background: url(../img/mark.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+#second_blk .table table tbody tr td:nth-child(6).wrong {
+  background: url(../img/wrong.png) #2ccfbb no-repeat center center;
+  background-size: 15px;
+}
+
+#second_blk h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+#second_blk ul li {
+  background: url(../images/icons/list-icon.png) no-repeat left 4px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-size: 9px;
+}
+#second_blk ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Form */
+@media (min-width: 768px) {
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 11px;
+}
+
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 32px;
+}
+
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 11px;
+  }
+}
+
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 19px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 13px;
   }
 }
