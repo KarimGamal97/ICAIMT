@@ -29,6 +29,11 @@
   </head>
 
   <body id="home">
+    <style>
+      .main-two:before {
+        background-image: none;
+      }
+    </style>
     <!--===================== HEADER =====================-->
     <header class="header-two">
       <a href="#" class="nav-btn">
@@ -51,19 +56,17 @@
             </div>
             <div class="col-3 header-top-info">
               <ul class="header-two-phone header-cont">
-                <li>
-                  <a href="contacts.html"
-                    ><i class="fas fa-calendar-alt"></i>May 21, 2025</a
-                  >
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-calendar-alt" style="color: #1dcd9f"></i>May
+                  21, 2025
                 </li>
               </ul>
             </div>
             <div class="col-3 header-top-info">
               <ul class="header-two-adr header-cont">
-                <li>
-                  <a href="contacts.html" class="d-flex"
-                    ><i class="fas fa-map-marker-alt"></i> ADSM, Abu Dhabi
-                  </a>
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-map-marker-alt" style="color: #1dcd9f"></i>
+                  ADSM, Abu Dhabi
                 </li>
               </ul>
             </div>
@@ -139,7 +142,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="sponsor.html">Sponsor</a></li>
+                  <li><a href="sponsor.html">Sponsorship</a></li>
                   <li><a href="registeration.html">Registeration </a></li>
                   <li class="dropdown">
                     <a href="about.html"
@@ -203,16 +206,47 @@
       </div>
     </div>
     <!--================= PAGE-TITLE END =================-->
+    <!--==================== MAIN-TWO ====================-->
+
+    <!--=================== MAIN-TWO END ===================-->
 
     <!--==================== OVERVIEW ====================-->
     <section class="overview">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="overview-img">
-              <img src="assets/img/abu_dhabi_school.png" alt="img" />
+        <section class="main-two">
+          <div class="main-slider-two">
+            <div
+              class="main-slide-two"
+              style="background-image: url(assets/img/abu_dhabi_school.png)"
+            >
+              <div class="container"></div>
+            </div>
+            <div
+              class="main-slide-two"
+              style="background-image: url(assets/img/4.png)"
+            >
+              <div class="container"></div>
+            </div>
+            <div
+              class="main-slide-two"
+              style="background-image: url(assets/img/5.png)"
+            >
+              <div class="container"></div>
+            </div>
+            <div
+              class="main-slide-two"
+              style="background-image: url(assets/img/6.png)"
+            >
+              <div class="container"></div>
             </div>
           </div>
+          <div class="main-arrow-cover">
+            <div class="container">
+              <div class="main-slide-arrow"></div>
+            </div>
+          </div>
+        </section>
+        <div class="row">
           <div class="col-12">
             <div>
               <h4 class="title-line-left mt-2 mb-3">Venue</h4>
@@ -282,7 +316,7 @@
               </li>
               <li>
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:18001234567">1-800-1234-567</a>
+                <a href="tel:+9712 6917811">+971-2 691 7811</a>
               </li>
               <li>
                 <i class="fa fa-envelope" aria-hidden="true"></i>

@@ -107,19 +107,17 @@
             </div>
             <div class="col-3 header-top-info">
               <ul class="header-two-phone header-cont">
-                <li>
-                  <a href="contacts.html"
-                    ><i class="fas fa-calendar-alt"></i>May 21, 2025</a
-                  >
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-calendar-alt" style="color: #1dcd9f"></i>May
+                  21, 2025
                 </li>
               </ul>
             </div>
             <div class="col-3 header-top-info">
               <ul class="header-two-adr header-cont">
-                <li>
-                  <a href="contacts.html" class="d-flex"
-                    ><i class="fas fa-map-marker-alt"></i> ADSM, Abu Dhabi
-                  </a>
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-map-marker-alt" style="color: #1dcd9f"></i>
+                  ADSM, Abu Dhabi
                 </li>
               </ul>
             </div>
@@ -195,7 +193,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="sponsor.html">Sponsor</a></li>
+                  <li><a href="sponsor.html">Sponsorship</a></li>
                   <li><a href="registeration.html">Registeration </a></li>
                   <li class="dropdown">
                     <a href="about.html"
@@ -249,11 +247,11 @@
       style="background-image: url(assets/img/breadcrumb-bg.jpg)"
     >
       <div class="container">
-        <h1 class="title-line-left">Sponsorship</h1>
+        <h1 class="title-line-left">Registration Form</h1>
         <div class="breadcrumbs">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li>Sponsorship</li>
+            <li>Registration Form</li>
           </ul>
         </div>
       </div>
@@ -265,7 +263,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <form action="/aicas24" method="post" novalidate="novalidate">
+          <form novalidate="novalidate">
             <div
               class="form-info"
               style="
@@ -352,7 +350,7 @@
                     <label class="control-label col-md-3" for="NumberOfPapers"
                       >Number of Papers</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <select
                         class="form-control PGOStatus valid"
                         cols="60"
@@ -381,7 +379,7 @@
                         ><span id="NumberOfPapersError" class=""></span
                       ></span>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <p
                         style="
                           color: green;
@@ -434,7 +432,7 @@
                       for="EDASPaperReferences"
                       >E-Papers Reference</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         id="EDASPaperReferences"
@@ -449,7 +447,7 @@
                         ><span id="EDASPaperReferencesError" class=""></span
                       ></span>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <p style="color: green; font-size: 14px">
                         4 digits number, please add “–“ after each paper
                         reference if you have more than one paper, for example:
@@ -462,7 +460,7 @@
                     <label class="control-label col-md-3" for="Title"
                       >Title</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <select
                         class="form-control PGOStatus"
                         cols="60"
@@ -491,7 +489,7 @@
                     <label class="control-label col-md-3" for="FirstName"
                       >First Name</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         data-val="true"
@@ -513,7 +511,7 @@
                     <label class="control-label col-md-3" for="LastName"
                       >Last Name</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         data-val="true"
@@ -535,7 +533,7 @@
                     <label class="control-label col-md-3" for="Affiliation"
                       >Affiliation</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         data-val="true"
@@ -557,7 +555,7 @@
                     <label class="control-label col-md-3" for="Email"
                       >Contact Email</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         data-val="true"
@@ -580,7 +578,7 @@
                     <label class="control-label col-md-3" for="ConfirmEmail"
                       >Confirm Email</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         data-val="true"
@@ -605,7 +603,7 @@
                     <label class="control-label col-md-3" for="Mobile"
                       >Mobile Number with Country Code (Optional)</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         id="Mobile"
@@ -625,7 +623,7 @@
                     <label class="control-label col-md-3" for="Country"
                       >Country</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <select
                         class="form-control PGOStatus"
                         cols="60"
@@ -987,7 +985,7 @@
                       for="TypeOfRegistration"
                       >Type of Registrations</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <select
                         class="form-control PGOStatus valid"
                         cols="60"
@@ -1000,13 +998,16 @@
                         aria-invalid="false"
                       >
                         <option value="0">Please Select</option>
-                        <option value="51">Early Regular paper $395</option>
-                        <option value="52">Early Student paper $325</option>
+                        <option value="51">Early Regular paper AED 395</option>
+                        <option value="52">Early Student paper AED 325</option>
                         <option value="53">
-                          Late Registration for regular paper $495 & $375 for a
-                          student paper
+                          Late Registration for regular paper AED 495
                         </option>
-                        <option value="54">Attendee $150 and late $175</option>
+                        <option value="54">
+                          Late Registration for student paper AED 375
+                        </option>
+                        <option value="55">Attendee for AED150</option>
+                        <option value="55">Late Attendee for AED175</option>
                       </select>
                       <span
                         class="field-validation-valid"
@@ -1025,7 +1026,7 @@
                       for="IEEEMembershipNumber"
                       >IEEE Membership Number</label
                     >
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <input
                         class="form-control"
                         id="IEEEMembershipNumber"
@@ -1040,7 +1041,7 @@
                         ><span id="IEEEMembershipNumberError" class=""></span
                       ></span>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <p style="color: green; font-size: 14px">
                         Please prepare to present onsite a proof of IEEE
                         membership
@@ -1058,34 +1059,47 @@
                       value="AED 0"
                     />
                     <input
-                      id="AmountInUSD"
-                      name="AmountInUSD"
+                      id="AmountInAED"
+                      name="AmountInAED"
                       type="hidden"
-                      value="USD 0"
+                      value="AED 0"
                     />
 
                     <input
                       type="hidden"
                       id="DisplayCurrency"
                       name="DisplayCurrency"
-                      value="USD"
+                      value="AED"
                     />
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <label
                         id="totalFeeVal"
                         class="control-label text-success"
                         style="font-size: 20px"
-                        >USD 0</label
+                        >AED 0</label
                       >
                     </div>
                   </div>
-                  <div class="form-group" style="margin: 0 auto">
-                    <div class="col-md-offset-2 col-md-12 mt-4">
-                      <input
-                        type="submit"
-                        value="Proceed to Payment"
-                        class="btn btn-default"
-                      />
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin-right: 100px;
+                    "
+                  >
+                    <div
+                      class="col-md-offset-2 col-md-12 mt-4"
+                      style="text-align: center"
+                    >
+                      <a href="coming-soon.html">
+                        <input
+                          type="submit"
+                          value="Proceed to Payment"
+                          class="btn btn-default"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1144,7 +1158,7 @@
               </li>
               <li>
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:18001234567">1-800-1234-567</a>
+                <a href="tel:+9712 6917811">+971-2 691 7811</a>
               </li>
               <li>
                 <i class="fa fa-envelope" aria-hidden="true"></i>
