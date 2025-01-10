@@ -263,7 +263,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <form novalidate="novalidate">
+          <form id="registrationForm" action="submit_form.php" method="POST">
             <div
               class="form-info"
               style="
@@ -302,7 +302,6 @@
             <h4 class="my-5" style="text-align: center">
               Please fill in your details to register:
             </h4>
-
             <div class="form-container">
               <div class="form-horizontal">
                 <div style="margin-left: 100px; margin-right: -100px">
@@ -399,7 +398,7 @@
                     <label
                       class="control-label col-md-3"
                       for="EDASPaperReferences"
-                      >E-Papers Reference</label
+                      >Paper ID</label
                     >
                     <div class="col-md-6">
                       <input
@@ -1054,13 +1053,18 @@
                       class="col-md-offset-2 col-md-12 mt-4"
                       style="text-align: center"
                     >
-                      <a href="coming-soon.html">
+                      <!-- <a href="coming-soon.html">
                         <input
                           type="submit"
                           value="Proceed to Payment"
                           class="btn btn-default"
                         />
-                      </a>
+                      </a> -->
+                      <input
+                        type="submit"
+                        value="Proceed to Payment"
+                        class="btn btn-default"
+                      />
                     </div>
                   </div>
                 </div>

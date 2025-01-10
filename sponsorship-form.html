@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICAIMT - Sposorship Form</title>
+    <!-- ===================== META ===================== -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <!-- ===================== STYLE ===================== -->
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <style>
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-horizontal {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .control-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .btn-default {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-default:hover {
+      background-color: #0056b3;
+    }
+
+    .field-validation-error {
+      color: #dc3545;
+      font-size: 12px;
+    }
+
+    .text-success {
+      color: #28a745;
+    }
+  </style>
+
+  <body id="home">
+    <!--===================== HEADER =====================-->
+    <header class="header-two">
+      <a href="#" class="nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="header-two-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-lg-3 logo-two-cover">
+              <a href="index.html" class="logo-footer">
+                <img
+                  src="assets/img/logo/main-logo.svg"
+                  width="45"
+                  alt="logo"
+                />
+                <div class="logo-text"><span>ICA</span>IMT</div>
+              </a>
+            </div>
+            <div class="col-3 header-top-info">
+              <ul class="header-two-phone header-cont">
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-calendar-alt" style="color: #1dcd9f"></i>May
+                  21, 2025
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 header-top-info">
+              <ul class="header-two-adr header-cont">
+                <li class="d-flex" style="gap: 10px">
+                  <i class="fas fa-map-marker-alt" style="color: #1dcd9f"></i>
+                  ADSM, Abu Dhabi
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 header-two-btn">
+              <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-menu header-menu-two">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="nav-menu">
+                <ul class="nav-list">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li class="dropdown">
+                    <a href="about.html"
+                      >About <i class="fa fa-angle-down" aria-hidden="true"></i
+                    ></a>
+                    <ul>
+                      <li><a href="about.html">Welcome Message</a></li>
+                      <li>
+                        <a href="prog-commit.html">Program Committe</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="call-for-paper.html"
+                      >Info for Authors
+                      <i class="fa fa-angle-down" aria-hidden="true"></i
+                    ></a>
+                    <ul>
+                      <li>
+                        <a href="call-for-paper.html">Call for Papers</a>
+                      </li>
+                      <li>
+                        <a href="camera-copyright.html"
+                          >Camera ready & copyright</a
+                        >
+                      </li>
+                      <li>
+                        <a href="conference-tracks.html">Conference Tracks</a>
+                      </li>
+                      <li>
+                        <a href="important-dates.html">Important Dates</a>
+                      </li>
+                      <li>
+                        <a href="paper-review.html">Paper Review Process</a>
+                      </li>
+                      <li>
+                        <a href="publication.html">Publication & indexes</a>
+                      </li>
+                      <li>
+                        <a href="submission.html">Submission Guidelines</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="conference-prog.html"
+                      >Conf. Program
+                      <i class="fa fa-angle-down" aria-hidden="true"></i
+                    ></a>
+                    <ul>
+                      <li>
+                        <a href="keynote-speaker.html">Keynote Speakers</a>
+                      </li>
+                      <li>
+                        <a href="conference-prog.html">Conference Program</a>
+                      </li>
+                      <li>
+                        <a href="accepted-papers.html">Accepted Papers</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="sponsor.html">Sponsorship</a></li>
+                  <li><a href="registration.html">registration </a></li>
+                  <li class="dropdown">
+                    <a href="venue.html"
+                      >Venue & Travel
+                      <i class="fa fa-angle-down" aria-hidden="true"></i
+                    ></a>
+                    <ul>
+                      <li>
+                        <a href="abu-dhabi.html">Abu Dhabi</a>
+                      </li>
+                      <li><a href="venue.html">Venue AD</a></li>
+                      <li><a href="visa.html">Visa & Travel</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- <li class="dropdown">
+              <a href="#"
+                >pages <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></a>
+              <ul>
+                <li><a href="pravicy-policy.html">Pravicy policy</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li> -->
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- <div class="col-2">
+        <div class="header-two-search">
+          <div class="header-search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <form action="#">
+            <input type="search" name="search" placeholder="Search" />
+            <button class="btn-search" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--=================== HEADER END ===================-->
+
+    <!--=================== PAGE-TITLE ===================-->
+    <div
+      class="page-title"
+      style="background-image: url(assets/img/breadcrumb-bg.jpg)"
+    >
+      <div class="container">
+        <h1 class="title-line-left">Sposorship Form</h1>
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Sposorship Form</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--================= PAGE-TITLE END =================-->
+
+    <!--==================== OVERVIEW ====================-->
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <form id="registrationForm" action="submit_form.php" method="POST">
+            <div
+              class="form-info"
+              style="
+                text-align: center;
+                border: 1px solid #555;
+                padding: 20px;
+                border-radius: 12px;
+                background-color: #f9f9f9;
+                font-family: Arial, sans-serif;
+                color: #333;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                line-height: 1.6;
+              "
+            >
+              <h4 style="margin: 0; font-size: 18px; color: #2ccfbb">
+                #ICAIMT 2025
+              </h4>
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 24px;
+                  font-weight: bold;
+                  color: #333;
+                "
+              >
+                International Conference on Artificial Intelligence Management
+                and Trends
+              </h2>
+              <h4 style="margin: 5px 0; font-size: 18px; color: #555">
+                Conference Date: May 21, 2025
+              </h4>
+              <h4 style="margin: 5px 0; font-size: 18px; color: #555">
+                ADSM, Abu Dhabi
+              </h4>
+            </div>
+            <h4 class="my-5" style="text-align: center">
+              Please fill in your details to register:
+            </h4>
+            <div class="form-container">
+              <div class="form-horizontal">
+                <div style="margin-left: 100px; margin-right: -100px">
+                  <div class="form-group">
+                    <label
+                      class="control-label col-md-3"
+                      for="Type of sponsorship"
+                      >Type of sponsorship</label
+                    >
+                    <div class="col-md-6">
+                      <select
+                        class="form-control PGOStatus"
+                        cols="60"
+                        data-val="true"
+                        data-val-required="The Type of sponsorship field is required."
+                        id="Type of sponsorship"
+                        name="Type of sponsorship"
+                      >
+                        <option value="">Please Select</option>
+                        <option value="Gold">Gold 7500 aed</option>
+                        <option value="Silver">Silver 6000 aed</option>
+                        <option value="Coffee">
+                          Coffee Break Sponsor 7000 aed
+                        </option>
+                        <option value="Conference">
+                          Conference Bags Sponsor 7000 aed
+                        </option>
+                        <option value="Welcome">
+                          Welcome Reception sponsor 7000 aed
+                        </option>
+                      </select>
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Title"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="Company name"
+                      >Company Name</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        data-val="true"
+                        data-val-required="The Company name field is required."
+                        id="Company name"
+                        name="Company name"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Company name"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="Company address"
+                      >Company Address</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        data-val="true"
+                        data-val-required="The Company address field is required."
+                        id="Company address"
+                        name="Company address"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Company address"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="City"
+                      >City</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        data-val="true"
+                        data-val-required="The City field is required."
+                        id="City"
+                        name="City"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="City"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="Name"
+                      >Contact Person Name</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        data-val="true"
+                        data-val-name="Invalid Name Address"
+                        data-val-required="The Contact Person Name field is required."
+                        id="Name"
+                        name="Name"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Name"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="Email"
+                      >Contact Person Email</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        data-val="true"
+                        data-val-email="Invalid Email Address"
+                        data-val-required="The Contact Person Email field is required."
+                        id="Email"
+                        name="Email"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Email"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="Mobile"
+                      >Contact Person Phone Number</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        class="form-control"
+                        id="Mobile"
+                        name="Mobile"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Mobile"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label id="totalFeeValText" class="control-label col-md-3"
+                      >Amount</label
+                    >
+                    <input
+                      id="AmountInAED"
+                      name="AmountInAED"
+                      type="hidden"
+                      value="AED 0"
+                    />
+                    <input
+                      id="AmountInAED"
+                      name="AmountInAED"
+                      type="hidden"
+                      value="AED 0"
+                    />
+
+                    <input
+                      type="hidden"
+                      id="DisplayCurrency"
+                      name="DisplayCurrency"
+                      value="AED"
+                    />
+                    <div class="col-md-6">
+                      <label
+                        id="totalFeeVal"
+                        class="control-label text-success"
+                        style="font-size: 20px"
+                        >AED 0</label
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="form-group"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin-right: 100px;
+                    "
+                  >
+                    <div
+                      class="col-md-offset-2 col-md-12 mt-4"
+                      style="text-align: center"
+                    >
+                      <!-- <a href="coming-soon.html">
+                        <input
+                          type="submit"
+                          value="Proceed to Payment"
+                          class="btn btn-default"
+                        />
+                      </a> -->
+                      <input
+                        type="submit"
+                        value="Proceed to Payment"
+                        class="btn btn-default"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--================== OVERVIEW END ==================-->
+
+    <!--===================== FOOTER =====================-->
+    <footer id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <a href="index.html" class="logo-footer">
+              <img src="assets/img/logo/main-logo.svg" width="45" alt="logo" />
+              <div class="logo-text"><span>ICA</span>IMT</div>
+            </a>
+            <div class="footer-text">
+              Welcome to the official website of The International Conference on
+              Artificial Intelligence Management and Trends (ICAIMT) in Abu
+              Dhabi, UAE.
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-7">
+            <h6>Contacts</h6>
+            <ul class="footer-contacts">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="about.html">ICAIMT Local Chair (Dr Neda Abdelhamid)</a>
+              </li>
+              <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <a href="tel:+9712 6917811">+971-2 691 7811</a>
+              </li>
+              <li>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:registration@ICAIMT.com"
+                  >registration@ICAIMT.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="col-12 col-sm-6 col-md-4 insta-list-cover">
+    <h6>Galery</h6>
+    <ul class="insta-list">
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-01.jpg"
+            data-src="assets/img/gallery-01.jpg"
+            alt="social"
+        /></a>
+      </li>
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-02.jpg"
+            data-src="assets/img/gallery-02.jpg"
+            alt="social"
+        /></a>
+      </li>
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-03.jpg"
+            data-src="assets/img/gallery-03.jpg"
+            alt="social"
+        /></a>
+      </li>
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-04.jpg"
+            data-src="assets/img/gallery-04.jpg"
+            alt="social"
+        /></a>
+      </li>
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-05.jpg"
+            data-src="assets/img/gallery-05.jpg"
+            alt="social"
+        /></a>
+      </li>
+      <li>
+        <a target="_blank" href="#"
+          ><img
+            class="lazy"
+            src="assets/img/gallery-06.jpg"
+            data-src="assets/img/gallery-06.jpg"
+            alt="social"
+        /></a>
+      </li>
+    </ul>
+  </div> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="copyright">
+                <a target="_blank" href="index.html">ICAIMT</a>© 2025 All Rights
+                Reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=================== FOOTER END ===================-->
+
+    <!--===================== TO TOP =====================-->
+    <a class="to-top" href="#home">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </a>
+    <!--=================== TO TOP END ===================-->
+
+    <script>
+      function showHidePaperFields() {
+        var isAuthor = document.querySelector(
+          'input[name="IsAuthor"]:checked'
+        ).value;
+        var paperFields = document.getElementById("divNumberOfPapers");
+        var epaperFields = document.getElementById("divEDASPaperReferences");
+
+        if (isAuthor === "Yes") {
+          paperFields.style.display = "flex";
+          epaperFields.style.display = "flex";
+        } else {
+          paperFields.style.display = "none";
+          epaperFields.style.display = "none";
+        }
+      }
+
+      // Add event listeners to radio buttons
+      document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('input[name="IsAuthor"]');
+        radioButtons.forEach(function (radio) {
+          radio.addEventListener("change", showHidePaperFields);
+        });
+      });
+    </script>
+
+    <!--===================== SCRIPT	=====================-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
