@@ -263,7 +263,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <form id="registrationForm" action="submit_form.php" method="POST">
+          <form id="registrationForm" onsubmit="return validateForm()">
             <div
               class="form-info"
               style="
@@ -305,6 +305,7 @@
             <div class="form-container">
               <div class="form-horizontal">
                 <div style="margin-left: 100px; margin-right: -100px">
+                  <!-- Type of Sponsorship -->
                   <div class="form-group">
                     <label
                       class="control-label col-md-3"
@@ -314,11 +315,9 @@
                     <div class="col-md-6">
                       <select
                         class="form-control PGOStatus"
-                        cols="60"
-                        data-val="true"
-                        data-val-required="The Type of sponsorship field is required."
                         id="Type of sponsorship"
                         name="Type of sponsorship"
+                        required
                       >
                         <option value="">Please Select</option>
                         <option value="Gold">Gold 7500 aed</option>
@@ -333,14 +332,10 @@
                           Welcome Reception sponsor 7000 aed
                         </option>
                       </select>
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Title"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Company Name -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Company name"
                       >Company Name</label
@@ -348,21 +343,15 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The Company name field is required."
                         id="Company name"
                         name="Company name"
                         type="text"
-                        value=""
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Company name"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Company Address -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Company address"
                       >Company Address</label
@@ -370,21 +359,15 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The Company address field is required."
                         id="Company address"
                         name="Company address"
                         type="text"
-                        value=""
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Company address"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- City -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="City"
                       >City</label
@@ -392,21 +375,15 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The City field is required."
                         id="City"
                         name="City"
                         type="text"
-                        value=""
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="City"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Contact Person Name -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Name"
                       >Contact Person Name</label
@@ -414,22 +391,15 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-name="Invalid Name Address"
-                        data-val-required="The Contact Person Name field is required."
                         id="Name"
                         name="Name"
                         type="text"
-                        value=""
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Name"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Contact Person Email -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Email"
                       >Contact Person Email</label
@@ -437,22 +407,15 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-email="Invalid Email Address"
-                        data-val-required="The Contact Person Email field is required."
                         id="Email"
                         name="Email"
-                        type="text"
-                        value=""
+                        type="email"
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Email"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Contact Person Phone Number -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Mobile"
                       >Contact Person Phone Number</label
@@ -462,17 +425,13 @@
                         class="form-control"
                         id="Mobile"
                         name="Mobile"
-                        type="text"
-                        value=""
+                        type="tel"
+                        required
                       />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Mobile"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
                   </div>
 
+                  <!-- Amount -->
                   <div class="form-group">
                     <label id="totalFeeValText" class="control-label col-md-3"
                       >Amount</label
@@ -489,7 +448,6 @@
                       type="hidden"
                       value="AED 0"
                     />
-
                     <input
                       type="hidden"
                       id="DisplayCurrency"
@@ -505,6 +463,8 @@
                       >
                     </div>
                   </div>
+
+                  <!-- Submit Button -->
                   <div
                     class="form-group"
                     style="
@@ -518,13 +478,6 @@
                       class="col-md-offset-2 col-md-12 mt-4"
                       style="text-align: center"
                     >
-                      <!-- <a href="coming-soon.html">
-                        <input
-                          type="submit"
-                          value="Proceed to Payment"
-                          class="btn btn-default"
-                        />
-                      </a> -->
                       <input
                         type="submit"
                         value="Proceed to Payment"
@@ -682,6 +635,21 @@
           radio.addEventListener("change", showHidePaperFields);
         });
       });
+
+      function validateForm() {
+        const form = document.getElementById("registrationForm");
+
+        // Check if the form is valid
+        if (!form.checkValidity()) {
+          // Trigger HTML5 validation messages
+          form.reportValidity();
+          return false; // Prevent form submission
+        }
+
+        // If the form is valid, redirect to coming-soon.html
+        window.location.href = "coming-soon.html";
+        return false; // Prevent the default form submission
+      }
     </script>
 
     <!--===================== SCRIPT	=====================-->

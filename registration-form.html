@@ -263,7 +263,8 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <form id="registrationForm" action="submit_form.php" method="POST">
+          <form id="registrationForm" onsubmit="return validateForm(event)">
+            <!-- Form Info Section -->
             <div
               class="form-info"
               style="
@@ -299,12 +300,16 @@
                 ADSM, Abu Dhabi
               </h4>
             </div>
+
             <h4 class="my-5" style="text-align: center">
               Please fill in your details to register:
             </h4>
+
+            <!-- Form Container -->
             <div class="form-container">
               <div class="form-horizontal">
                 <div style="margin-left: 100px; margin-right: -100px">
+                  <!-- Type of Attendee -->
                   <div class="form-group">
                     <label class="control-label" for="IsAuthor"
                       >Type of Attendee?</label
@@ -320,6 +325,7 @@
                           onchange="ResetSubscriptions()"
                           type="radio"
                           value="Yes"
+                          required
                         />&nbsp;&nbsp;Author with accepted Paper
                       </div>
                       <div class="control-label">
@@ -330,17 +336,19 @@
                           onchange="ResetSubscriptions()"
                           type="radio"
                           value="No"
+                          required
                         />&nbsp;&nbsp;Non-Author Attendee
                       </div>
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="IsAuthor"
-                        data-valmsg-replace="true"
-                      ></span>
                     </div>
+                    <span
+                      class="field-validation-valid"
+                      data-valmsg-for="IsAuthor"
+                      data-valmsg-replace="true"
+                    ></span>
                   </div>
 
-                  <div
+                  <!-- Number of Papers (Hidden by Default) -->
+                  <!-- <div
                     class="form-group"
                     id="divNumberOfPapers"
                     style="display: none"
@@ -350,20 +358,13 @@
                     >
                     <div class="col-md-6">
                       <select
-                        class="form-control PGOStatus valid"
-                        cols="60"
-                        data-val="true"
-                        data-val-number="The field Number of Papers must be a number."
-                        data-val-required="The Number of Papers field is required."
+                        class="form-control"
                         id="NumberOfPapers"
                         name="NumberOfPapers"
                         onchange="numberOfPapersChanged()"
-                        aria-describedby="NumberOfPapers-error"
-                        aria-invalid="false"
+                        required
                       >
-                        <option selected="selected" value="0">
-                          Please Select
-                        </option>
+                        <option value="">Please Select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -388,8 +389,9 @@
                         Each author registration covers up to 2 papers.
                       </p>
                     </div>
-                  </div>
+                  </div> -->
 
+                  <!-- Paper ID (Hidden by Default) -->
                   <div
                     class="form-group"
                     id="divEDASPaperReferences"
@@ -408,6 +410,7 @@
                         onchange="validatePaperIdSelection()"
                         type="text"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-error"
@@ -417,6 +420,7 @@
                     </div>
                   </div>
 
+                  <!-- Title -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Title"
                       >Title</label
@@ -424,11 +428,9 @@
                     <div class="col-md-6">
                       <select
                         class="form-control PGOStatus"
-                        cols="60"
-                        data-val="true"
-                        data-val-required="The Title field is required."
                         id="Title"
                         name="Title"
+                        required
                       >
                         <option value="">Please Select</option>
                         <option value="Dr.">Dr.</option>
@@ -446,6 +448,7 @@
                     </div>
                   </div>
 
+                  <!-- First Name -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="FirstName"
                       >First Name</label
@@ -453,12 +456,11 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The First Name field is required."
                         id="FirstName"
                         name="FirstName"
                         type="text"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-valid"
@@ -468,6 +470,7 @@
                     </div>
                   </div>
 
+                  <!-- Last Name -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="LastName"
                       >Last Name</label
@@ -475,12 +478,11 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The Last Name field is required."
                         id="LastName"
                         name="LastName"
                         type="text"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-valid"
@@ -490,6 +492,7 @@
                     </div>
                   </div>
 
+                  <!-- Affiliation -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Affiliation"
                       >Affiliation</label
@@ -497,12 +500,11 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-required="The Affiliation field is required."
                         id="Affiliation"
                         name="Affiliation"
                         type="text"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-valid"
@@ -512,6 +514,7 @@
                     </div>
                   </div>
 
+                  <!-- Contact Email -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Email"
                       >Contact Email</label
@@ -519,13 +522,11 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-email="Invalid Email Address"
-                        data-val-required="The Contact Email field is required."
                         id="Email"
                         name="Email"
-                        type="text"
+                        type="email"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-valid"
@@ -535,6 +536,7 @@
                     </div>
                   </div>
 
+                  <!-- Confirm Email -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="ConfirmEmail"
                       >Confirm Email</label
@@ -542,15 +544,11 @@
                     <div class="col-md-6">
                       <input
                         class="form-control"
-                        data-val="true"
-                        data-val-email="Invalid Email Address"
-                        data-val-equalto="Email do not match"
-                        data-val-equalto-other="*.Email"
-                        data-val-required="The Confirm Email field is required."
                         id="ConfirmEmail"
                         name="ConfirmEmail"
-                        type="text"
+                        type="email"
                         value=""
+                        required
                       />
                       <span
                         class="field-validation-valid"
@@ -560,6 +558,7 @@
                     </div>
                   </div>
 
+                  <!-- Mobile Number -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Mobile"
                       >Mobile Number with Country Code (Optional)</label
@@ -580,6 +579,7 @@
                     </div>
                   </div>
 
+                  <!-- Country -->
                   <div class="form-group">
                     <label class="control-label col-md-3" for="Country"
                       >Country</label
@@ -587,11 +587,9 @@
                     <div class="col-md-6">
                       <select
                         class="form-control PGOStatus"
-                        cols="60"
-                        data-val="true"
-                        data-val-required="The Country field is required."
                         id="Country"
                         name="Country"
+                        required
                       >
                         <option value="">Please Select</option>
                         <option value="Afghanistan">Afghanistan</option>
@@ -940,6 +938,7 @@
                     </div>
                   </div>
 
+                  <!-- Type of Registration -->
                   <div class="form-group">
                     <label
                       class="control-label col-md-3"
@@ -948,17 +947,13 @@
                     >
                     <div class="col-md-6">
                       <select
-                        class="form-control PGOStatus valid"
-                        cols="60"
-                        data-val="true"
-                        data-val-required="The Type of Registrations field is required."
+                        class="form-control PGOStatus"
                         id="TypeOfRegistration"
                         name="TypeOfRegistration"
                         onchange="typeOfRegistrationChanged()"
-                        aria-describedby="TypeOfRegistration-error"
-                        aria-invalid="false"
+                        required
                       >
-                        <option value="0">Please Select</option>
+                        <option value="">Please Select</option>
                         <option value="51">Early Regular paper $ 395</option>
                         <option value="52">Early Student paper $ 325</option>
                         <option value="53">
@@ -977,6 +972,8 @@
                       ></span>
                     </div>
                   </div>
+
+                  <!-- IEEE Membership Number (Hidden by Default) -->
                   <div
                     class="form-group"
                     id="divIEEEMembershipNumber"
@@ -1009,6 +1006,8 @@
                       </p>
                     </div>
                   </div>
+
+                  <!-- Amount -->
                   <div class="form-group">
                     <label id="totalFeeValText" class="control-label col-md-3"
                       >Amount</label
@@ -1025,7 +1024,6 @@
                       type="hidden"
                       value="usd 0"
                     />
-
                     <input
                       type="hidden"
                       id="DisplayCurrency"
@@ -1041,6 +1039,8 @@
                       >
                     </div>
                   </div>
+
+                  <!-- Submit Button -->
                   <div
                     class="form-group"
                     style="
@@ -1054,13 +1054,6 @@
                       class="col-md-offset-2 col-md-12 mt-4"
                       style="text-align: center"
                     >
-                      <!-- <a href="coming-soon.html">
-                        <input
-                          type="submit"
-                          value="Proceed to Payment"
-                          class="btn btn-default"
-                        />
-                      </a> -->
                       <input
                         type="submit"
                         value="Proceed to Payment"
@@ -1199,14 +1192,14 @@
         var isAuthor = document.querySelector(
           'input[name="IsAuthor"]:checked'
         ).value;
-        var paperFields = document.getElementById("divNumberOfPapers");
+        // var paperFields = document.getElementById("divNumberOfPapers");
         var epaperFields = document.getElementById("divEDASPaperReferences");
 
         if (isAuthor === "Yes") {
-          paperFields.style.display = "none";
+          // paperFields.style.display = "none";
           epaperFields.style.display = "flex";
         } else {
-          paperFields.style.display = "none";
+          // paperFields.style.display = "none";
           epaperFields.style.display = "none";
         }
       }
@@ -1218,6 +1211,24 @@
           radio.addEventListener("change", showHidePaperFields);
         });
       });
+
+      function validateForm(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const form = document.getElementById("registrationForm");
+
+        // Check if the form is valid
+        if (!form.checkValidity()) {
+          // Trigger HTML5 validation messages
+          form.reportValidity();
+          return false; // Stop further execution
+        }
+
+        // If the form is valid, redirect to coming-soon.html
+        window.location.href = "coming-soon.html";
+        console.log("Form submitted");
+        return false; // Prevent form submission after redirection
+      }
     </script>
 
     <!--===================== SCRIPT	=====================-->
