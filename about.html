@@ -154,31 +154,31 @@
                   </li>
 
                   <!-- <li class="dropdown">
-                    <a href="#"
-                      >pages <i class="fa fa-angle-down" aria-hidden="true"></i
-                    ></a>
-                    <ul>
-                      <li><a href="pravicy-policy.html">Pravicy policy</a></li>
-                      <li><a href="404.html">404</a></li>
-                    </ul>
-                  </li> -->
+              <a href="#"
+                >pages <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></a>
+              <ul>
+                <li><a href="pravicy-policy.html">Pravicy policy</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li> -->
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </nav>
             </div>
             <!-- <div class="col-2">
-              <div class="header-two-search">
-                <div class="header-search-icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <form action="#">
-                  <input type="search" name="search" placeholder="Search" />
-                  <button class="btn-search" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-              </div>
-            </div> -->
+        <div class="header-two-search">
+          <div class="header-search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <form action="#">
+            <input type="search" name="search" placeholder="Search" />
+            <button class="btn-search" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div> -->
           </div>
         </div>
       </div>
@@ -238,7 +238,9 @@
               Conference Date: May 21, 2025
             </h4>
             <h4 style="margin: 5px 0; font-size: 18px; color: #555">
-              ADSM, Abu Dhabi
+              <a href="https://adsm.ac.ae/" style="font-weight: bold"
+                >Abu Dhabi School of Management (ADSM)</a
+              >, Abu Dhabi
             </h4>
           </div>
         </div>
@@ -258,7 +260,12 @@
                   International Conference on Artificial Intelligence Management
                   and Trends (ICAIMT)
                 </h5>
-                <p><strong>Location</strong>: ADSM, Abu Dhabi</p>
+                <p>
+                  <strong>Location</strong>:
+                  <a href="https://adsm.ac.ae/" style="font-weight: bold"
+                    >Abu Dhabi School of Management (ADSM)</a
+                  >, Abu Dhabi
+                </p>
                 <p><strong>Conference Date</strong> : May 21 2025</p>
                 <p><strong>Submission deadline</strong> : March 15, 2025</p>
                 <p><strong>Registration deadline</strong> : April 30, 2025</p>
@@ -268,10 +275,14 @@
                 <p>
                   Welcome to the official website of The International
                   Conference on Artificial Intelligence Management and Trends
-                  (ICAIMT). It is going to be held on 21 – 23 May 2025 in ADSM
+                  (ICAIMT). It will be held between May 21 st – 23 rd 2025 at
+                  the
+                  <a href="https://adsm.ac.ae/" style="font-weight: bold"
+                    >Abu Dhabi School of Management (ADSM)</a
+                  >
                   campus in Abu Dhabi, UAE. ICAIMT is a specialized conference
-                  on AI, AI trends, and data analytics that serves as a vital
-                  platform for exploring the latest advancements and
+                  on AI, AI management , trends, and analytics that serves as a
+                  vital platform for exploring the latest advancements and
                   understanding how these technologies are reshaping multiple
                   sectors.
                 </p>
@@ -386,20 +397,21 @@
       ></div>
       <div class="container">
         <div class="row counter-cover">
-          <div class="col-6 col-sm-3 counter-item">
-            <div class="counter-number"><span data-number="5">0</span></div>
+          <div class="col-6 col-sm-4 counter-item">
+            <div class="counter-number"><span data-number="4">0</span></div>
             <h5>speakers</h5>
           </div>
-          <div class="col-6 col-sm-3 counter-item">
-            <div class="counter-number"><span data-number="3">0</span>k</div>
-            <h5>Impressions</h5>
+          <div class="col-6 col-sm-4 counter-item">
+            <div class="counter-number">
+              <span id="countdown-days">0</span>d
+              <span id="countdown-hours">0</span>h
+              <!-- <span id="countdown-minutes">0</span>m -->
+              <!-- <span id="countdown-seconds">0</span>s -->
+            </div>
+            <h5>Countdown to May 21, 2025</h5>
           </div>
-          <div class="col-6 col-sm-3 counter-item">
-            <div class="counter-number"><span data-number="2">0</span></div>
-            <h5>Places</h5>
-          </div>
-          <div class="col-6 col-sm-3 counter-item">
-            <div class="counter-number"><span data-number="20">0</span></div>
+          <div class="col-6 col-sm-4 counter-item">
+            <div class="counter-number"><span data-number="30">0</span></div>
             <h5>Topics</h5>
           </div>
         </div>
@@ -522,6 +534,46 @@
       <i class="fa fa-chevron-up" aria-hidden="true"></i>
     </a>
     <!--=================== TO TOP END ===================-->
+
+    <script>
+      // Set the target date (May 21, 2025)
+      const targetDate = new Date("May 21, 2025 00:00:00").getTime();
+
+      // Update the countdown every second
+      const countdown = setInterval(() => {
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the remaining time
+        const timeRemaining = targetDate - now;
+
+        // Check if the countdown is over
+        if (timeRemaining <= 0) {
+          clearInterval(countdown);
+          document.getElementById("countdown-days").textContent = "0";
+          document.getElementById("countdown-hours").textContent = "0";
+          document.getElementById("countdown-minutes").textContent = "0";
+          document.getElementById("countdown-seconds").textContent = "0";
+          return;
+        }
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        // const minutes = Math.floor(
+        //   (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        // );
+        // const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Update the countdown display
+        document.getElementById("countdown-days").textContent = days;
+        document.getElementById("countdown-hours").textContent = hours;
+        // document.getElementById("countdown-minutes").textContent = minutes;
+        // document.getElementById("countdown-seconds").textContent = seconds;
+      }, 1000); // Update every second
+    </script>
 
     <!--===================== SCRIPT	=====================-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

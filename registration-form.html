@@ -29,6 +29,9 @@
   </head>
 
   <style>
+    .error-border {
+      border: 1px solid red !important;
+    }
     .form-container {
       max-width: 800px;
       margin: 0 auto;
@@ -263,7 +266,11 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12">
-          <form id="registrationForm" onsubmit="return validateForm(event)">
+          <form
+            id="registrationForm"
+            onsubmit="return validateForm(event)"
+            novalidate
+          >
             <!-- Form Info Section -->
             <div
               class="form-info"
@@ -346,50 +353,6 @@
                       data-valmsg-replace="true"
                     ></span>
                   </div>
-
-                  <!-- Number of Papers (Hidden by Default) -->
-                  <!-- <div
-                    class="form-group"
-                    id="divNumberOfPapers"
-                    style="display: none"
-                  >
-                    <label class="control-label col-md-3" for="NumberOfPapers"
-                      >Number of Papers</label
-                    >
-                    <div class="col-md-6">
-                      <select
-                        class="form-control"
-                        id="NumberOfPapers"
-                        name="NumberOfPapers"
-                        onchange="numberOfPapersChanged()"
-                        required
-                      >
-                        <option value="">Please Select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                      </select>
-                      <span
-                        class="field-validation-error"
-                        data-valmsg-replace="true"
-                        ><span id="NumberOfPapersError" class=""></span
-                      ></span>
-                    </div>
-                    <div class="col-md-6">
-                      <p
-                        style="
-                          color: green;
-                          font-size: 12px;
-                          margin-bottom: 5px;
-                        "
-                      >
-                        Each author registration covers up to 2 papers.
-                      </p>
-                    </div>
-                  </div> -->
 
                   <!-- Paper ID (Hidden by Default) -->
                   <div
@@ -1188,47 +1151,99 @@
     <!--=================== TO TOP END ===================-->
 
     <script>
-      function showHidePaperFields() {
-        var isAuthor = document.querySelector(
-          'input[name="IsAuthor"]:checked'
-        ).value;
-        // var paperFields = document.getElementById("divNumberOfPapers");
-        var epaperFields = document.getElementById("divEDASPaperReferences");
+      // Function to handle registration type changes
+      function typeOfRegistrationChanged() {
+        const registrationType =
+          document.getElementById("TypeOfRegistration").value;
+        const amountLabel = document.getElementById("totalFeeVal");
 
-        if (isAuthor === "Yes") {
-          // paperFields.style.display = "none";
-          epaperFields.style.display = "flex";
-        } else {
-          // paperFields.style.display = "none";
-          epaperFields.style.display = "none";
+        // Update the displayed amount based on the selected registration type
+        switch (registrationType) {
+          case "51":
+            amountLabel.textContent = "$ 395";
+            break;
+          case "52":
+            amountLabel.textContent = "$ 325";
+            break;
+          case "53":
+            amountLabel.textContent = "$ 495";
+            break;
+          case "54":
+            amountLabel.textContent = "$ 375";
+            break;
+          case "55":
+            amountLabel.textContent = "$ 150";
+            break;
+          default:
+            amountLabel.textContent = "$ 0";
         }
       }
 
-      // Add event listeners to radio buttons
-      document.addEventListener("DOMContentLoaded", function () {
-        var radioButtons = document.querySelectorAll('input[name="IsAuthor"]');
-        radioButtons.forEach(function (radio) {
-          radio.addEventListener("change", showHidePaperFields);
-        });
-      });
+      // Function to validate the Paper ID field
+      function validatePaperIdSelection() {
+        const paperIdInput = document.getElementById("EDASPaperReferences");
+        const errorSpan = document.getElementById("EDASPaperReferencesError");
 
+        // Check if the Paper ID is valid (e.g., not empty)
+        if (!paperIdInput.value.trim()) {
+          errorSpan.textContent = "Paper ID is required."; // Show error message
+          paperIdInput.style.border = "1px solid red"; // Highlight the field in red
+        } else {
+          errorSpan.textContent = ""; // Clear error message
+          paperIdInput.style.border = ""; // Remove red border
+        }
+      }
+
+      // Function to show/hide the Paper ID field based on the "IsAuthor" radio button
+      function ResetSubscriptions() {
+        const paperIdField = document.getElementById("divEDASPaperReferences");
+        if (document.getElementById("IsAuthor").checked) {
+          paperIdField.style.display = "block"; // Show the Paper ID field
+        } else {
+          paperIdField.style.display = "none"; // Hide the Paper ID field
+        }
+      }
+
+      // Function to validate the form
       function validateForm(event) {
         event.preventDefault(); // Prevent the default form submission behavior
 
         const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll("input, select, textarea");
+        let isValid = true;
 
-        // Check if the form is valid
-        if (!form.checkValidity()) {
-          // Trigger HTML5 validation messages
-          form.reportValidity();
-          return false; // Stop further execution
-        }
+        // Loop through all inputs and check if they are valid
+        inputs.forEach((input) => {
+          if (input.hasAttribute("required") && !input.value.trim()) {
+            input.style.border = "1px solid red"; // Highlight empty fields
+            isValid = false; // Mark form as invalid
+          } else {
+            input.style.border = ""; // Remove red border for filled fields
+          }
+        });
 
         // If the form is valid, redirect to coming-soon.html
-        window.location.href = "coming-soon.html";
-        console.log("Form submitted");
-        return false; // Prevent form submission after redirection
+        if (isValid) {
+          window.location.href = "coming-soon.html";
+        } else {
+          alert("Please fill out all required fields."); // Show an error message
+        }
       }
+
+      // Attach the validateForm function to the form's submit event
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", validateForm);
+
+      // Add event listeners to radio buttons for showing/hiding the Paper ID field
+      document.addEventListener("DOMContentLoaded", function () {
+        const radioButtons = document.querySelectorAll(
+          'input[name="IsAuthor"]'
+        );
+        radioButtons.forEach((radio) => {
+          radio.addEventListener("change", ResetSubscriptions);
+        });
+      });
     </script>
 
     <!--===================== SCRIPT	=====================-->

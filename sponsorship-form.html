@@ -29,6 +29,26 @@
   </head>
 
   <style>
+    .error-input {
+      border: 2px solid red !important;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-control.error-input:focus {
+      border-color: red !important;
+      box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
     .form-container {
       max-width: 800px;
       margin: 0 auto;
@@ -264,6 +284,7 @@
       <div class="row">
         <div class="col-12">
           <form id="registrationForm" onsubmit="return validateForm()">
+            <!-- Form Info Section -->
             <div
               class="form-info"
               style="
@@ -299,9 +320,12 @@
                 ADSM, Abu Dhabi
               </h4>
             </div>
+
             <h4 class="my-5" style="text-align: center">
               Please fill in your details to register:
             </h4>
+
+            <!-- Form Container -->
             <div class="form-container">
               <div class="form-horizontal">
                 <div style="margin-left: 100px; margin-right: -100px">
@@ -428,39 +452,6 @@
                         type="tel"
                         required
                       />
-                    </div>
-                  </div>
-
-                  <!-- Amount -->
-                  <div class="form-group">
-                    <label id="totalFeeValText" class="control-label col-md-3"
-                      >Amount</label
-                    >
-                    <input
-                      id="AmountInAED"
-                      name="AmountInAED"
-                      type="hidden"
-                      value="AED 0"
-                    />
-                    <input
-                      id="AmountInAED"
-                      name="AmountInAED"
-                      type="hidden"
-                      value="AED 0"
-                    />
-                    <input
-                      type="hidden"
-                      id="DisplayCurrency"
-                      name="DisplayCurrency"
-                      value="AED"
-                    />
-                    <div class="col-md-6">
-                      <label
-                        id="totalFeeVal"
-                        class="control-label text-success"
-                        style="font-size: 20px"
-                        >AED 0</label
-                      >
                     </div>
                   </div>
 
@@ -610,46 +601,91 @@
       <i class="fa fa-chevron-up" aria-hidden="true"></i>
     </a>
     <!--=================== TO TOP END ===================-->
-
     <script>
-      function showHidePaperFields() {
-        var isAuthor = document.querySelector(
-          'input[name="IsAuthor"]:checked'
-        ).value;
-        var paperFields = document.getElementById("divNumberOfPapers");
-        var epaperFields = document.getElementById("divEDASPaperReferences");
+      function validateForm() {
+        console.log("validateForm function is running");
 
-        if (isAuthor === "Yes") {
-          paperFields.style.display = "flex";
-          epaperFields.style.display = "flex";
-        } else {
-          paperFields.style.display = "none";
-          epaperFields.style.display = "none";
+        const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll(
+          "input[required], select[required], textarea[required]"
+        );
+        let isValid = true;
+
+        // Remove all error styles first
+        inputs.forEach((input) => {
+          input.classList.remove("error-input");
+
+          // Remove existing error message if any
+          const existingError =
+            input.parentElement.querySelector(".error-message");
+          if (existingError) {
+            existingError.remove();
+          }
+        });
+
+        // Validate each required input
+        inputs.forEach((input) => {
+          if (!input.value.trim()) {
+            // Add error class immediately
+            input.classList.add("error-input");
+
+            // Create and add error message
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "error-message visible";
+            errorMessage.textContent = `${
+              input.getAttribute("placeholder") || input.getAttribute("name")
+            } is required`;
+            input.parentElement.appendChild(errorMessage);
+
+            isValid = false;
+          }
+
+          // Add special validation for email
+          if (input.type === "email" && input.value) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(input.value)) {
+              input.classList.add("error-input");
+              const errorMessage = document.createElement("div");
+              errorMessage.className = "error-message visible";
+              errorMessage.textContent = "Please enter a valid email address";
+              input.parentElement.appendChild(errorMessage);
+              isValid = false;
+            }
+          }
+
+          // Add special validation for phone
+          if (input.type === "tel" && input.value) {
+            const phonePattern = /^\+?[\d\s-]{10,}$/;
+            if (!phonePattern.test(input.value)) {
+              input.classList.add("error-input");
+              const errorMessage = document.createElement("div");
+              errorMessage.className = "error-message visible";
+              errorMessage.textContent = "Please enter a valid phone number";
+              input.parentElement.appendChild(errorMessage);
+              isValid = false;
+            }
+          }
+        });
+
+        if (isValid) {
+          console.log("Form is valid. Redirecting...");
+          window.location.href = "coming-soon.html";
         }
+
+        return false; // Prevent default form submission
       }
 
-      // Add event listeners to radio buttons
-      document.addEventListener("DOMContentLoaded", function () {
-        var radioButtons = document.querySelectorAll('input[name="IsAuthor"]');
-        radioButtons.forEach(function (radio) {
-          radio.addEventListener("change", showHidePaperFields);
+      // Add event listeners to clear errors when user starts typing
+      document.querySelectorAll("input, select, textarea").forEach((input) => {
+        input.addEventListener("input", function () {
+          this.classList.remove("error-input");
+          const errorMessage =
+            this.parentElement.querySelector(".error-message");
+          if (errorMessage) {
+            errorMessage.remove();
+          }
         });
       });
-
-      function validateForm() {
-        const form = document.getElementById("registrationForm");
-
-        // Check if the form is valid
-        if (!form.checkValidity()) {
-          // Trigger HTML5 validation messages
-          form.reportValidity();
-          return false; // Prevent form submission
-        }
-
-        // If the form is valid, redirect to coming-soon.html
-        window.location.href = "coming-soon.html";
-        return false; // Prevent the default form submission
-      }
     </script>
 
     <!--===================== SCRIPT	=====================-->
