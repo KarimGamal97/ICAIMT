@@ -4359,7 +4359,7 @@ blockquote:before {
 .s-pricing .container:before {
   content: "";
   position: absolute;
-  background-image: url(../img/effect-1.svg);
+  /* background-image: url(../img/effect-1.svg); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
