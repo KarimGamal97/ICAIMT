@@ -188,6 +188,9 @@ h5 {
 h6 {
   font-size: 16px;
 }
+.fs-6 {
+  font-size: 12px !important;
+}
 a,
 .title a {
   color: #151515;
