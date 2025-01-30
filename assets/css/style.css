@@ -942,7 +942,7 @@ header {
     padding: 10px 15px;
   }
   .header-two .btn {
-    display: none;
+    margin: 0 auto;
   }
   .logo-two-cover {
     -webkit-box-pack: end;
