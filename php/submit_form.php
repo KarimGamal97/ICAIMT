@@ -15,10 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <head>
             <title>Registration Details</title>
         </head>
-&lt;!-- Google tag (gtag.js) --&gt; &lt;script async
-src=&quot;https://www.googletagmanager.com/gtag/js?id=G-TQ7HQF6HGE&quot;&gt;&lt;/script&gt; &lt;script&gt;
-window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
-gtag(&#39;js&#39;, new Date()); gtag(&#39;config&#39;, &#39;G-TQ7HQF6HGE&#39;); &lt;/script&gt;
         <body>
             <h2>Registration Details</h2>
             <p><strong>First Name:</strong> $firstName</p>
