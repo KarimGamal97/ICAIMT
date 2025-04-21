@@ -1,218 +1,211 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ICAIMT - Regiseration Form</title>
-    <!-- ===================== META ===================== -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="shortcut icon" href="assets/img/favicon.png" />
-    <!-- ===================== STYLE ===================== -->
-    <link rel="stylesheet" href="assets/css/slick.min.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-grid.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
 
-  <style>
-    .error-border {
-      border: 1px solid red !important;
-    }
-    .form-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+<head>
+  <meta charset="UTF-8" />
+  <title>ICAIMT - Regiseration Form</title>
+  <!-- ===================== META ===================== -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" />
+  <!-- ===================== STYLE ===================== -->
+  <link rel="stylesheet" href="assets/css/slick.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ7HQF6HGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-TQ7HQF6HGE");
+</script>
 
-    .form-horizontal {
-      padding: 20px;
-    }
+<style>
+  .error-border {
+    border: 1px solid red !important;
+  }
 
-    .form-group {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-    }
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-    .control-label {
-      font-weight: bold;
-      color: #333;
-    }
+  .form-horizontal {
+    padding: 20px;
+  }
 
-    .form-control {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 14px;
-    }
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
 
-    .btn-default {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+  .control-label {
+    font-weight: bold;
+    color: #333;
+  }
 
-    .btn-default:hover {
-      background-color: #0056b3;
-    }
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 
-    .field-validation-error {
-      color: #dc3545;
-      font-size: 12px;
-    }
+  .btn-default {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-    .text-success {
-      color: #28a745;
-    }
-  </style>
+  .btn-default:hover {
+    background-color: #0056b3;
+  }
 
-  <body id="home">
-    <!--===================== HEADER =====================-->
-    <header class="header-two">
-      <a href="#" class="nav-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <div class="header-two-top">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 col-lg-3 logo-two-cover">
-              <a href="index.html" class="logo-footer">
-                <img
-                  src="assets/img/logo/main-logo.svg"
-                  width="45"
-                  alt="logo"
-                />
-                <div class="logo-text"><span>ICA</span>IMT</div>
-              </a>
-            </div>
-            <div class="col-3 header-top-info">
-              <ul class="header-two-phone header-cont">
-                <li class="d-flex" style="gap: 10px">
-                  <i class="fas fa-calendar-alt" style="color: #1dcd9f"></i>May
-                  21 - 22, 2025
-                </li>
-              </ul>
-            </div>
-            <div class="col-3 header-top-info">
-              <ul class="header-two-adr header-cont">
-                <li class="d-flex" style="gap: 10px">
-                  <i class="fas fa-map-marker-alt" style="color: #1dcd9f"></i>
-                  ADSM, Abu Dhabi
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 header-two-btn d-none">
-              <a href="contact.html" class="btn">Contact Us</a>
-            </div>
+  .field-validation-error {
+    color: #dc3545;
+    font-size: 12px;
+  }
+
+  .text-success {
+    color: #28a745;
+  }
+</style>
+
+<body id="home">
+  <!--===================== HEADER =====================-->
+  <header class="header-two">
+    <a href="#" class="nav-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="header-two-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-lg-3 logo-two-cover">
+            <a href="index.html" class="logo-footer">
+              <img src="assets/img/logo/main-logo.svg" width="45" alt="logo" />
+              <div class="logo-text"><span>ICA</span>IMT</div>
+            </a>
+          </div>
+          <div class="col-3 header-top-info">
+            <ul class="header-two-phone header-cont">
+              <li class="d-flex" style="gap: 10px">
+                <i class="fas fa-calendar-alt" style="color: #1dcd9f"></i>May
+                21 - 22, 2025
+              </li>
+            </ul>
+          </div>
+          <div class="col-3 header-top-info">
+            <ul class="header-two-adr header-cont">
+              <li class="d-flex" style="gap: 10px">
+                <i class="fas fa-map-marker-alt" style="color: #1dcd9f"></i>
+                ADSM, Abu Dhabi
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 header-two-btn d-none">
+            <a href="contact.html" class="btn">Contact Us</a>
           </div>
         </div>
       </div>
-      <div class="header-menu header-menu-two">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <nav class="nav-menu">
-                <ul class="nav-list">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li class="dropdown">
-                    <a href="about.html"
-                      >About <i class="fa fa-angle-down" aria-hidden="true"></i
-                    ></a>
-                    <ul>
-                      <li><a href="about.html">Welcome Message</a></li>
-                      <li>
-                        <a href="prog-commit.html">Program Committee</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="call-for-paper.html"
-                      >Info for Authors
-                      <i class="fa fa-angle-down" aria-hidden="true"></i
-                    ></a>
-                    <ul>
-                      <li>
-                        <a href="important-dates.html">Important Dates</a>
-                      </li>
-                      <li>
-                        <a href="call-for-paper.html">Call for Papers</a>
-                      </li>
-                      <li>
-                        <a href="camera-copyright.html"
-                          >Camera ready & copyright</a
-                        >
-                      </li>
-                      <li>
-                        <a href="conference-tracks.html">Conference Tracks</a>
-                      </li>
-                      <li>
-                        <a href="paper-review.html">Paper Review Process</a>
-                      </li>
-                      <li>
-                        <a href="publication.html">Publication & indexes</a>
-                      </li>
-                      <li>
-                        <a href="submission.html">Submission Guidelines</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="conference-prog.html"
-                      >Conf. Program
-                      <i class="fa fa-angle-down" aria-hidden="true"></i
-                    ></a>
-                    <ul>
-                      <li>
-                        <a href="keynote-speaker.html">Keynote Speakers</a>
-                      </li>
-                      <li>
-                        <a href="conference-prog.html">Conference Program</a>
-                      </li>
-                      <li>
-                        <a href="accepted-papers.html">Accepted Papers</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="sponsor.html">Sponsorship</a></li>
-                  <li><a href="registration.html">registration </a></li>
-                  <li class="dropdown">
-                    <a href="venue.html"
-                      >Venue & Travel
-                      <i class="fa fa-angle-down" aria-hidden="true"></i
-                    ></a>
-                    <ul>
-                      <li>
-                        <a href="abu-dhabi.html">Abu Dhabi</a>
-                      </li>
-                      <li><a href="venue.html">Venue AD</a></li>
-                      <li><a href="visa.html">Visa & Travel</a></li>
-                    </ul>
-                  </li>
+    </div>
+    <div class="header-menu header-menu-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="nav-menu">
+              <ul class="nav-list">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="about.html">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul>
+                    <li><a href="about.html">Welcome Message</a></li>
+                    <li>
+                      <a href="prog-commit.html">Program Committee</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="call-for-paper.html">Info for Authors
+                    <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul>
+                    <li>
+                      <a href="important-dates.html">Important Dates</a>
+                    </li>
+                    <li>
+                      <a href="call-for-paper.html">Call for Papers</a>
+                    </li>
+                    <li>
+                      <a href="camera-copyright.html">Camera ready & copyright</a>
+                    </li>
+                    <li>
+                      <a href="conference-tracks.html">Conference Tracks</a>
+                    </li>
+                    <li>
+                      <a href="paper-review.html">Paper Review Process</a>
+                    </li>
+                    <li>
+                      <a href="publication.html">Publication & indexes</a>
+                    </li>
+                    <li>
+                      <a href="submission.html">Submission Guidelines</a>
+                    </li>
+                    <li>
+                      <a href="short-paper-submission.html">Short paper Submission</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="conference-prog.html">Conf. Program
+                    <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul>
+                    <li>
+                      <a href="keynote-speaker.html">Keynote Speakers</a>
+                    </li>
+                    <li>
+                      <a href="conference-prog.html">Conference Program</a>
+                    </li>
+                    <li>
+                      <a href="accepted-papers.html">Accepted Papers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="ICAIMT_2025_Sponsorship_Prospectus.pdf" target="_blank">Sponsorship</a>
+                </li>
+                <li><a href="registration.html">registration </a></li>
+                <li class="dropdown">
+                  <a href="venue.html">Venue & Travel
+                    <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul>
+                    <li>
+                      <a href="abu-dhabi.html">Abu Dhabi</a>
+                    </li>
+                    <li><a href="venue.html">Venue AD</a></li>
+                    <li><a href="visa.html">Visa & Travel</a></li>
+                  </ul>
+                </li>
 
-                  <!-- <li class="dropdown">
+                <!-- <li class="dropdown">
               <a href="#"
                 >pages <i class="fa fa-angle-down" aria-hidden="true"></i
               ></a>
@@ -221,11 +214,11 @@
                 <li><a href="404.html">404</a></li>
               </ul>
             </li> -->
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-            <!-- <div class="col-2">
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- <div class="col-2">
         <div class="header-two-search">
           <div class="header-search-icon">
             <i class="fas fa-search"></i>
@@ -238,43 +231,34 @@
           </form>
         </div>
       </div> -->
-          </div>
-        </div>
-      </div>
-    </header>
-    <!--=================== HEADER END ===================-->
-
-    <!--=================== PAGE-TITLE ===================-->
-    <div
-      class="page-title"
-      style="background-image: url(assets/img/breadcrumb-bg.jpg)"
-    >
-      <div class="container">
-        <h1 class="title-line-left">Registration Form</h1>
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>Registration Form</li>
-          </ul>
         </div>
       </div>
     </div>
-    <!--================= PAGE-TITLE END =================-->
+  </header>
+  <!--=================== HEADER END ===================-->
 
-    <!--==================== OVERVIEW ====================-->
+  <!--=================== PAGE-TITLE ===================-->
+  <div class="page-title" style="background-image: url(assets/img/breadcrumb-bg.jpg)">
+    <div class="container">
+      <h1 class="title-line-left">Registration Form</h1>
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Registration Form</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--================= PAGE-TITLE END =================-->
 
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-12">
-          <form
-            id="registrationForm"
-            onsubmit="return validateForm(event)"
-            novalidate
-          >
-            <!-- Form Info Section -->
-            <div
-              class="form-info"
-              style="
+  <!--==================== OVERVIEW ====================-->
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <form id="registrationForm" onsubmit="return validateForm(event)" novalidate>
+          <!-- Form Info Section -->
+          <div class="form-info" style="
                 text-align: center;
                 border: 1px solid #555;
                 padding: 20px;
@@ -284,972 +268,630 @@
                 color: #333;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 line-height: 1.6;
-              "
-            >
-              <h4 style="margin: 0; font-size: 18px; color: #2ccfbb">
-                #ICAIMT2025
-              </h4>
-              <h2
-                style="
+              ">
+            <h4 style="margin: 0; font-size: 18px; color: #2ccfbb">
+              #ICAIMT2025
+            </h4>
+            <h2 style="
                   margin: 10px 0;
                   font-size: 24px;
                   font-weight: bold;
                   color: #333;
-                "
-              >
-                International Conference on Artificial Intelligence Management
-                and Trends
-              </h2>
-              <h4 style="margin: 5px 0; font-size: 18px; color: #555">
-                Conference Date: May 21, 2025
-              </h4>
-              <h4 style="margin: 5px 0; font-size: 18px; color: #555">
-                ADSM, Abu Dhabi
-              </h4>
-            </div>
-
-            <h4 class="my-5" style="text-align: center">
-              Please fill in your details to register:
+                ">
+              International Conference on Artificial Intelligence Management
+              and Trends
+            </h2>
+            <h4 style="margin: 5px 0; font-size: 18px; color: #555">
+              Conference Date: May 21, 2025
             </h4>
+            <h4 style="margin: 5px 0; font-size: 18px; color: #555">
+              ADSM, Abu Dhabi
+            </h4>
+          </div>
 
-            <!-- Form Container -->
-            <div class="form-container">
-              <div class="form-horizontal">
-                <div style="margin-left: 100px; margin-right: -100px">
-                  <!-- Type of Attendee -->
-                  <div class="form-group">
-                    <label class="control-label" for="IsAuthor"
-                      >Type of Attendee?</label
-                    >
-                    <div
-                      class="d-flex justify-content-center"
-                      style="gap: 15px"
-                    >
-                      <div class="control-label">
-                        <input
-                          id="IsAuthor"
-                          name="IsAuthor"
-                          onchange="ResetSubscriptions()"
-                          type="radio"
-                          value="Yes"
-                          required
-                        />&nbsp;&nbsp;Author with accepted Paper
-                      </div>
-                      <div class="control-label">
-                        <input
-                          checked="checked"
-                          id="IsAuthor"
-                          name="IsAuthor"
-                          onchange="ResetSubscriptions()"
-                          type="radio"
-                          value="No"
-                          required
-                        />&nbsp;&nbsp;Non-Author Attendee
-                      </div>
+          <h4 class="my-5" style="text-align: center">
+            Please fill in your details to register:
+          </h4>
+
+          <!-- Form Container -->
+          <div class="form-container">
+            <div class="form-horizontal">
+              <div style="margin-left: 100px; margin-right: -100px">
+                <!-- Type of Attendee -->
+                <div class="form-group">
+                  <label class="control-label" for="IsAuthor">Type of Attendee?</label>
+                  <div class="d-flex justify-content-center" style="gap: 15px">
+                    <div class="control-label">
+                      <input id="IsAuthor" name="IsAuthor" onchange="ResetSubscriptions()" type="radio" value="Yes"
+                        required />&nbsp;&nbsp;Author with accepted Paper
                     </div>
-                    <span
-                      class="field-validation-valid"
-                      data-valmsg-for="IsAuthor"
-                      data-valmsg-replace="true"
-                    ></span>
-                  </div>
-
-                  <!-- Paper ID (Hidden by Default) -->
-                  <div
-                    class="form-group"
-                    id="divEDASPaperReferences"
-                    style="display: none"
-                  >
-                    <label
-                      class="control-label col-md-3"
-                      for="EDASPaperReferences"
-                      >Paper ID</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="EDASPaperReferences"
-                        name="EDASPaperReferences"
-                        onchange="validatePaperIdSelection()"
-                        type="text"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-error"
-                        data-valmsg-replace="true"
-                        ><span id="EDASPaperReferencesError" class=""></span
-                      ></span>
+                    <div class="control-label">
+                      <input checked="checked" id="IsAuthor" name="IsAuthor" onchange="ResetSubscriptions()"
+                        type="radio" value="No" required />&nbsp;&nbsp;Non-Author Attendee
                     </div>
                   </div>
+                  <span class="field-validation-valid" data-valmsg-for="IsAuthor" data-valmsg-replace="true"></span>
+                </div>
 
-                  <!-- Title -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="Title"
-                      >Title</label
-                    >
-                    <div class="col-md-6">
-                      <select
-                        class="form-control PGOStatus"
-                        id="Title"
-                        name="Title"
-                        required
-                      >
-                        <option value="">Please Select</option>
-                        <option value="Dr.">Dr.</option>
-                        <option value="Prof.">Prof.</option>
-                        <option value="Eng.">Eng.</option>
-                        <option value="Mr.">Mr.</option>
-                        <option value="Ms.">Ms.</option>
-                        <option value="Mrs.">Mrs.</option>
-                      </select>
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Title"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Paper ID (Hidden by Default) -->
+                <div class="form-group" id="divEDASPaperReferences" style="display: none">
+                  <label class="control-label col-md-3" for="EDASPaperReferences">Paper ID</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="EDASPaperReferences" name="EDASPaperReferences"
+                      onchange="validatePaperIdSelection()" type="text" value="" />
+                    <span class="field-validation-error" data-valmsg-replace="true"><span id="EDASPaperReferencesError"
+                        class=""></span></span>
                   </div>
+                </div>
 
-                  <!-- First Name -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="FirstName"
-                      >First Name</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="FirstName"
-                        name="FirstName"
-                        type="text"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="FirstName"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Title -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="Title">Title</label>
+                  <div class="col-md-6">
+                    <select class="form-control PGOStatus" id="Title" name="Title" required>
+                      <option value="">Please Select</option>
+                      <option value="Dr.">Dr.</option>
+                      <option value="Prof.">Prof.</option>
+                      <option value="Eng.">Eng.</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Ms.">Ms.</option>
+                      <option value="Mrs.">Mrs.</option>
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Last Name -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="LastName"
-                      >Last Name</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="LastName"
-                        name="LastName"
-                        type="text"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="LastName"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- First Name -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="FirstName">First Name</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="FirstName" name="FirstName" type="text" value="" required />
+                    <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Affiliation -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="Affiliation"
-                      >Affiliation</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="Affiliation"
-                        name="Affiliation"
-                        type="text"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Affiliation"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Last Name -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="LastName">Last Name</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="LastName" name="LastName" type="text" value="" required />
+                    <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Contact Email -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="Email"
-                      >Contact Email</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="Email"
-                        name="Email"
-                        type="email"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Email"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Affiliation -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="Affiliation">Affiliation</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="Affiliation" name="Affiliation" type="text" value="" required />
+                    <span class="field-validation-valid" data-valmsg-for="Affiliation"
+                      data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Confirm Email -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="ConfirmEmail"
-                      >Confirm Email</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="ConfirmEmail"
-                        name="ConfirmEmail"
-                        type="email"
-                        value=""
-                        required
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="ConfirmEmail"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Contact Email -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="Email">Contact Email</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="Email" name="Email" type="email" value="" required />
+                    <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Mobile Number -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="Mobile"
-                      >Mobile Number with Country Code (Optional)</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="Mobile"
-                        name="Mobile"
-                        type="text"
-                        value=""
-                      />
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Mobile"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Confirm Email -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="ConfirmEmail">Confirm Email</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="ConfirmEmail" name="ConfirmEmail" type="email" value="" required />
+                    <span class="field-validation-valid" data-valmsg-for="ConfirmEmail"
+                      data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Country -->
-                  <div class="form-group">
-                    <label class="control-label col-md-3" for="Country"
-                      >Country</label
-                    >
-                    <div class="col-md-6">
-                      <select
-                        class="form-control PGOStatus"
-                        id="Country"
-                        name="Country"
-                        required
-                      >
-                        <option value="">Please Select</option>
-                        <option value="Afghanistan">Afghanistan</option>
-                        <option value="Åland Islands">Åland Islands</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="American Samoa">American Samoa</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Anguilla">Anguilla</option>
-                        <option value="Antarctica">Antarctica</option>
-                        <option value="Antigua and Barbuda">
-                          Antigua and Barbuda
-                        </option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bermuda">Bermuda</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Bosnia and Herzegovina">
-                          Bosnia and Herzegovina
-                        </option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Bouvet Island">Bouvet Island</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="British Indian Ocean Territory">
-                          British Indian Ocean Territory
-                        </option>
-                        <option value="Brunei Darussalam">
-                          Brunei Darussalam
-                        </option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Cape Verde">Cape Verde</option>
-                        <option value="Cayman Islands">Cayman Islands</option>
-                        <option value="Central African Republic">
-                          Central African Republic
-                        </option>
-                        <option value="Chad">Chad</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Christmas Island">
-                          Christmas Island
-                        </option>
-                        <option value="Cocos (Keeling) Islands">
-                          Cocos (Keeling) Islands
-                        </option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Congo">Congo</option>
-                        <option value="Congo, The Democratic Republic of The">
-                          Congo, The Democratic Republic of The
-                        </option>
-                        <option value="Cook Islands">Cook Islands</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Cote D'ivoire">Cote D'ivoire</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czech Republic">Czech Republic</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">
-                          Dominican Republic
-                        </option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">
-                          Equatorial Guinea
-                        </option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Falkland Islands (Malvinas)">
-                          Falkland Islands (Malvinas)
-                        </option>
-                        <option value="Faroe Islands">Faroe Islands</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
-                        <option value="France">France</option>
-                        <option value="French Guiana">French Guiana</option>
-                        <option value="French Polynesia">
-                          French Polynesia
-                        </option>
-                        <option value="French Southern Territories">
-                          French Southern Territories
-                        </option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Gibraltar">Gibraltar</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Greenland">Greenland</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guadeloupe">Guadeloupe</option>
-                        <option value="Guam">Guam</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guernsey">Guernsey</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guinea-bissau">Guinea-bissau</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Heard Island and Mcdonald Islands">
-                          Heard Island and Mcdonald Islands
-                        </option>
-                        <option value="Holy See (Vatican City State)">
-                          Holy See (Vatican City State)
-                        </option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hong Kong">Hong Kong</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran, Islamic Republic of">
-                          Iran, Islamic Republic of
-                        </option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Isle of Man">Isle of Man</option>
-                        <option value="Israel">Israel</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jersey">Jersey</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="Korea, Democratic People's Republic of">
-                          Korea, Democratic People's Republic of
-                        </option>
-                        <option value="Korea, Republic of">
-                          Korea, Republic of
-                        </option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Lao People's Democratic Republic">
-                          Lao People's Democratic Republic
-                        </option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libyan Arab Jamahiriya">
-                          Libyan Arab Jamahiriya
-                        </option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Macao">Macao</option>
-                        <option
-                          value="Macedonia, The Former Yugoslav Republic of"
-                        >
-                          Macedonia, The Former Yugoslav Republic of
-                        </option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">
-                          Marshall Islands
-                        </option>
-                        <option value="Martinique">Martinique</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mayotte">Mayotte</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Micronesia, Federated States of">
-                          Micronesia, Federated States of
-                        </option>
-                        <option value="Moldova, Republic of">
-                          Moldova, Republic of
-                        </option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montenegro">Montenegro</option>
-                        <option value="Montserrat">Montserrat</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Mozambique">Mozambique</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Namibia">Namibia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherlands">Netherlands</option>
-                        <option value="Netherlands Antilles">
-                          Netherlands Antilles
-                        </option>
-                        <option value="New Caledonia">New Caledonia</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Niue">Niue</option>
-                        <option value="Norfolk Island">Norfolk Island</option>
-                        <option value="Northern Mariana Islands">
-                          Northern Mariana Islands
-                        </option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau">Palau</option>
-                        <option value="Palestinian Territory, Occupied">
-                          Palestinian Territory, Occupied
-                        </option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">
-                          Papua New Guinea
-                        </option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Pitcairn">Pitcairn</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Puerto Rico">Puerto Rico</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Reunion">Reunion</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russian Federation">
-                          Russian Federation
-                        </option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="Saint Helena">Saint Helena</option>
-                        <option value="Saint Kitts and Nevis">
-                          Saint Kitts and Nevis
-                        </option>
-                        <option value="Saint Lucia">Saint Lucia</option>
-                        <option value="Saint Pierre and Miquelon">
-                          Saint Pierre and Miquelon
-                        </option>
-                        <option value="Saint Vincent and The Grenadines">
-                          Saint Vincent and The Grenadines
-                        </option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Sao Tome and Principe">
-                          Sao Tome and Principe
-                        </option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="Somalia">Somalia</option>
-                        <option value="South Africa">South Africa</option>
-                        <option
-                          value="South Georgia and The South Sandwich Islands"
-                        >
-                          South Georgia and The South Sandwich Islands
-                        </option>
-                        <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Svalbard and Jan Mayen">
-                          Svalbard and Jan Mayen
-                        </option>
-                        <option value="Swaziland">Swaziland</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syrian Arab Republic">
-                          Syrian Arab Republic
-                        </option>
-                        <option value="Taiwan">Taiwan</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania, United Republic of">
-                          Tanzania, United Republic of
-                        </option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Timor-leste">Timor-leste</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tokelau">Tokelau</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad and Tobago">
-                          Trinidad and Tobago
-                        </option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Turks and Caicos Islands">
-                          Turks and Caicos Islands
-                        </option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Emirates">
-                          United Arab Emirates
-                        </option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="United States">United States</option>
-                        <option value="United States Minor Outlying Islands">
-                          United States Minor Outlying Islands
-                        </option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Uzbekistan">Uzbekistan</option>
-                        <option value="Vanuatu">Vanuatu</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Viet Nam">Viet Nam</option>
-                        <option value="Virgin Islands, British">
-                          Virgin Islands, British
-                        </option>
-                        <option value="Virgin Islands, U.S.">
-                          Virgin Islands, U.S.
-                        </option>
-                        <option value="Wallis and Futuna">
-                          Wallis and Futuna
-                        </option>
-                        <option value="Western Sahara">Western Sahara</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                        <option value="Other">Other</option>
-                      </select>
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="Country"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Mobile Number -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="Mobile">Mobile Number with Country Code (Optional)</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="Mobile" name="Mobile" type="text" value="" />
+                    <span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Type of Registration -->
-                  <div class="form-group">
-                    <label
-                      class="control-label col-md-3"
-                      for="TypeOfRegistration"
-                      >Type of Registrations</label
-                    >
-                    <div class="col-md-6">
-                      <select
-                        class="form-control PGOStatus"
-                        id="TypeOfRegistration"
-                        name="TypeOfRegistration"
-                        onchange="typeOfRegistrationChanged()"
-                        required
-                      >
-                        <option value="">Please Select</option>
-                        <option value="51">Early Regular paper $ 395</option>
-                        <option value="52">Early Student paper $ 325</option>
-                        <option value="53">
-                          Late Registration for regular paper $ 495
-                        </option>
-                        <option value="54">
-                          Late Registration for student paper $ 375
-                        </option>
-                        <option value="55">Attendee for $ 150</option>
-                        <option value="55">Late Attendee for $ 175</option>
-                      </select>
-                      <span
-                        class="field-validation-valid"
-                        data-valmsg-for="TypeOfRegistration"
-                        data-valmsg-replace="true"
-                      ></span>
-                    </div>
+                <!-- Country -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="Country">Country</label>
+                  <div class="col-md-6">
+                    <select class="form-control PGOStatus" id="Country" name="Country" required>
+                      <option value="">Please Select</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Åland Islands">Åland Islands</option>
+
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="Country" data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- IEEE Membership Number (Hidden by Default) -->
-                  <div
-                    class="form-group"
-                    id="divIEEEMembershipNumber"
-                    style="display: none"
-                  >
-                    <label
-                      class="control-label col-md-3"
-                      for="IEEEMembershipNumber"
-                      >IEEE Membership Number</label
-                    >
-                    <div class="col-md-6">
-                      <input
-                        class="form-control"
-                        id="IEEEMembershipNumber"
-                        name="IEEEMembershipNumber"
-                        onchange="validatePaperIdSelection()"
-                        type="text"
-                        value=""
-                      />
-                      <span
-                        class="field-validation-error"
-                        data-valmsg-replace="true"
-                        ><span id="IEEEMembershipNumberError" class=""></span
-                      ></span>
-                    </div>
-                    <div class="col-md-6">
-                      <p style="color: green; font-size: 14px">
-                        Please prepare to present onsite a proof of IEEE
-                        membership
-                      </p>
-                    </div>
+                <!-- Type of Registration -->
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="TypeOfRegistration">Type of Registrations</label>
+                  <div class="col-md-6">
+                    <select class="form-control PGOStatus" id="TypeOfRegistration" name="TypeOfRegistration"
+                      onchange="typeOfRegistrationChanged()" required>
+                      <option value="">Please Select</option>
+                      <option value="51">Early Regular paper $395</option>
+                      <option value="52">Early Student paper $325</option>
+                      <option value="53">
+                        Late Registration for regular paper $495
+                      </option>
+                      <option value="54">
+                        Late Registration for student paper $375
+                      </option>
+                      <option value="56">Short Paper $200</option>
+                      <option value="55">Attendee for $150</option>
+                      <option value="7">Late Attendee for $175</option>
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="TypeOfRegistration"
+                      data-valmsg-replace="true"></span>
                   </div>
+                </div>
 
-                  <!-- Amount -->
-                  <div class="form-group">
-                    <label id="totalFeeValText" class="control-label col-md-3"
-                      >Amount</label
-                    >
-                    <input
-                      id="AmountInUSD"
-                      name="AmountInUSD"
-                      type="hidden"
-                      value="USD 0"
-                    />
-                    <input
-                      id="AmountInUSD"
-                      name="AmountInUSD"
-                      type="hidden"
-                      value="usd 0"
-                    />
-                    <input
-                      type="hidden"
-                      id="DisplayCurrency"
-                      name="DisplayCurrency"
-                      value="usd"
-                    />
-                    <div class="col-md-6">
-                      <label
-                        id="totalFeeVal"
-                        class="control-label text-success"
-                        style="font-size: 20px"
-                        >$ 0</label
-                      >
-                    </div>
+                <!-- IEEE Membership Number (Hidden by Default) -->
+                <div class="form-group" id="divIEEEMembershipNumber" style="display: none">
+                  <label class="control-label col-md-3" for="IEEEMembershipNumber">IEEE Membership Number</label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="IEEEMembershipNumber" name="IEEEMembershipNumber"
+                      onchange="validatePaperIdSelection()" type="text" value="" />
+                    <span class="field-validation-error" data-valmsg-replace="true"><span id="IEEEMembershipNumberError"
+                        class=""></span></span>
                   </div>
+                  <div class="col-md-6">
+                    <p style="color: green; font-size: 14px">
+                      Please prepare to present onsite a proof of IEEE
+                      membership
+                    </p>
+                  </div>
+                </div>
 
-                  <!-- Submit Button -->
-                  <div
-                    class="form-group"
-                    style="
+                <!-- Amount -->
+                <div class="form-group">
+                  <label id="totalFeeValText" class="control-label col-md-3">Amount</label>
+                  <input id="AmountInUSD" name="AmountInUSD" type="hidden" value="USD 0" />
+                  <input id="AmountInUSD" name="AmountInUSD" type="hidden" value="usd 0" />
+                  <input type="hidden" id="DisplayCurrency" name="DisplayCurrency" value="usd" />
+                  <div class="col-md-6">
+                    <label id="totalFeeVal" class="control-label text-success" style="font-size: 20px">$ 0</label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group" style="
                       display: flex;
                       justify-content: center;
                       align-items: center;
                       margin-right: 100px;
-                    "
-                  >
-                    <div
-                      class="col-md-offset-2 col-md-12 mt-4"
-                      style="text-align: center"
-                    >
-                      <input
-                        type="submit"
-                        value="Proceed to Payment"
-                        class="btn btn-default"
-                      />
-                    </div>
+                    ">
+                  <div class="col-md-offset-2 col-md-12 mt-4" style="text-align: center">
+                    <input type="submit" value="Proceed to Payment" class="btn btn-default" />
                   </div>
                 </div>
               </div>
             </div>
-          </form>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--================== OVERVIEW END ==================-->
+
+  <!--==================== S-PARTNERS ====================-->
+  <section class="s-partners partners-home-two" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-4 col-md-4">
+          <img class="lazy" src="assets/img/logo/adsm-white.svg" data-src="assets/img/adsm-white.svg" alt="img"
+            style="background-color: #333" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-4">
+          <img class="lazy" src="assets/img/logo/chamber.svg" data-src="assets/img/chamber.svg" alt="img" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-4">
+          <img class="lazy" src="assets/img/logo/uae-academy.png" data-src="assets/img/uae-academy.png" alt="img" />
         </div>
       </div>
     </div>
+  </section>
+  <!--================== S-PARTNERS END ==================-->
 
-    <!--================== OVERVIEW END ==================-->
+  <!--===================== FOOTER =====================-->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <a href="index.html" class="logo-footer">
+            <img src="assets/img/logo/main-logo.svg" width="45" alt="logo" />
+            <div class="logo-text"><span>ICA</span>IMT</div>
+          </a>
+          <div class="footer-text text-justify">
+            Welcome to the official website of The International Conference on Artificial Intelligence Management and
+            Trends (ICAIMT) in Abu Dhabi, UAE. Organized by Abu Dhabi School of Management.
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-7">
+          <h6>Contacts</h6>
+          <ul class="footer-contacts">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <a href="about.html">ICAIMT Local Chair (Dr Neda Abdelhamid)</a>
+            </li>
+            <li>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <a href="tel:+9712 6917811">+971-2 691 7811</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:registration@ICAIMT.com">registration@ICAIMT.com</a>
+            </li>
+          </ul>
+        </div>
 
-    <!--===================== FOOTER =====================-->
-    <footer id="contact">
+        <div class="col-12 col-md-2 mt-5">
+          <li style="list-style: none">
+            <h6 style="color: #313cd3">Our Sponsors</h6>
+            <img src="assets/img/footer-logo-02.png" alt="social" style="mix-blend-mode: multiply; height: 70px;" />
+          </li>
+        </div>
+        <div class="col-12 col-md-8 mt-5">
+          <div class="row">
+            <div class="col-md-6">
+              <li style="list-style: none">
+                <h6 style="color: #313cd3">In Collaboration with</h6>
+                <img src="assets/img/footer-logo-01.png" alt="social"
+                  style="mix-blend-mode: multiply; height: 70px; " />
+                <p style="color: #333;font-size: 9px;">
+                  Journal of Information &amp; Knowledge Management”
+                </p>
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li style="list-style: none">
+                <br />
+                <br />
+                <img src="assets/img/emerald pub (1).png" alt="social"
+                  style="mix-blend-mode: multiply;  height: 70px;" />
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2 mt-5">
+          <li style="list-style: none">
+            <h6 style="color: #313cd3">Organized By</h6>
+            <img src="assets/img/adsm.png" alt="social" style="mix-blend-mode: multiply; height: 70px;" />
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-5">
-            <a href="index.html" class="logo-footer">
-              <img src="assets/img/logo/main-logo.svg" width="45" alt="logo" />
-              <div class="logo-text"><span>ICA</span>IMT</div>
-            </a>
-            <div class="footer-text">
-              Welcome to the official website of The International Conference on
-              Artificial Intelligence Management and Trends (ICAIMT) in Abu
-              Dhabi, UAE.
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-7">
-            <h6>Contacts</h6>
-            <ul class="footer-contacts">
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <a href="about.html">ICAIMT Local Chair (Dr Neda Abdelhamid)</a>
-              </li>
-              <li>
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:+9712 6917811">+971-2 691 7811</a>
-              </li>
-              <li>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:registration@ICAIMT.com"
-                  >registration@ICAIMT.com</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- <div class="col-12 col-sm-6 col-md-4 insta-list-cover">
-    <h6>Galery</h6>
-    <ul class="insta-list">
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-01.jpg"
-            data-src="assets/img/gallery-01.jpg"
-            alt="social"
-        /></a>
-      </li>
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-02.jpg"
-            data-src="assets/img/gallery-02.jpg"
-            alt="social"
-        /></a>
-      </li>
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-03.jpg"
-            data-src="assets/img/gallery-03.jpg"
-            alt="social"
-        /></a>
-      </li>
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-04.jpg"
-            data-src="assets/img/gallery-04.jpg"
-            alt="social"
-        /></a>
-      </li>
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-05.jpg"
-            data-src="assets/img/gallery-05.jpg"
-            alt="social"
-        /></a>
-      </li>
-      <li>
-        <a target="_blank" href="#"
-          ><img
-            class="lazy"
-            src="assets/img/gallery-06.jpg"
-            data-src="assets/img/gallery-06.jpg"
-            alt="social"
-        /></a>
-      </li>
-    </ul>
-  </div> -->
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-              <div class="copyright">
-                <a target="_blank" href="index.html">ICAIMT</a>© 2025 All Rights
-                Reserved.
-              </div>
+          <div class="col-12 d-flex justify-content-center">
+            <div class="copyright">
+              <a target="_blank" href="index.html">ICAIMT</a>© 2025 All Rights
+              Reserved.
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!--=================== FOOTER END ===================-->
+    </div>
+  </footer>
+  <!--=================== FOOTER END ===================-->
 
-    <!--===================== TO TOP =====================-->
-    <a class="to-top" href="#home">
-      <i class="fa fa-chevron-up" aria-hidden="true"></i>
-    </a>
-    <!--=================== TO TOP END ===================-->
+  <!--===================== TO TOP =====================-->
+  <a class="to-top" href="#home">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+  <!--=================== TO TOP END ===================-->
 
-    <script>
-      // Function to handle registration type changes
-      function typeOfRegistrationChanged() {
-        const registrationType =
-          document.getElementById("TypeOfRegistration").value;
-        const amountLabel = document.getElementById("totalFeeVal");
+  <script>
+    const API_KEY = 'afc7837a904c72052b3f2f3588a9adf9131c6bb5459984a159ad4f874d1280b2';
+    // Function to handle registration type changes
+    function typeOfRegistrationChanged() {
+      const registrationType =
+        document.getElementById("TypeOfRegistration").value;
+      const amountLabel = document.getElementById("totalFeeVal");
 
-        // Update the displayed amount based on the selected registration type
-        switch (registrationType) {
-          case "51":
-            amountLabel.textContent = "$ 395";
-            break;
-          case "52":
-            amountLabel.textContent = "$ 325";
-            break;
-          case "53":
-            amountLabel.textContent = "$ 495";
-            break;
-          case "54":
-            amountLabel.textContent = "$ 375";
-            break;
-          case "55":
-            amountLabel.textContent = "$ 150";
-            break;
-          default:
-            amountLabel.textContent = "$ 0";
-        }
+      // Update the displayed amount based on the selected registration type
+      switch (registrationType) {
+        case "51":
+          amountLabel.textContent = "$395";
+          break;
+        case "52":
+          amountLabel.textContent = "$325";
+          break;
+        case "53":
+          amountLabel.textContent = "$495";
+          break;
+        case "54":
+          amountLabel.textContent = "$375";
+          break;
+        case "55":
+          amountLabel.textContent = "$150";
+        case "56":
+          amountLabel.textContent = "$200";
+        case "7":
+          amountLabel.textContent = "$175";
+          break;
+        default:
+          amountLabel.textContent = "$0";
+
       }
+    }
 
-      // Function to validate the Paper ID field
-      function validatePaperIdSelection() {
-        const paperIdInput = document.getElementById("EDASPaperReferences");
-        const errorSpan = document.getElementById("EDASPaperReferencesError");
+    // Function to validate the Paper ID field
+    function validatePaperIdSelection() {
+      const paperIdInput = document.getElementById("EDASPaperReferences");
+      const errorSpan = document.getElementById("EDASPaperReferencesError");
 
-        // Check if the Paper ID is valid (e.g., not empty)
-        if (!paperIdInput.value.trim()) {
-          errorSpan.textContent = "Paper ID is required."; // Show error message
-          paperIdInput.style.border = "1px solid red"; // Highlight the field in red
+      // Check if the Paper ID is valid (e.g., not empty)
+      if (!paperIdInput.value.trim()) {
+        errorSpan.textContent = "Paper ID is required."; // Show error message
+        paperIdInput.style.border = "1px solid red"; // Highlight the field in red
+      } else {
+        errorSpan.textContent = ""; // Clear error message
+        paperIdInput.style.border = ""; // Remove red border
+      }
+    }
+
+    // Function to get Payment For ID based on registration type
+    function getPaymentForID(typeOfRegistration) {
+      const paymentMapping = {
+        '51': '38', // Early Regular Paper
+        '52': '39', // Early Student Paper
+        '53': '40', // Late Registration - Regular Paper
+        '54': '41', // Late Registration - Student Paper
+        '55': '42', // Attendee
+        '7': '43',  // Late Attendee
+        '56': '44'  // Short Paper
+      };
+      return paymentMapping[typeOfRegistration] || '';
+    }
+
+    // Function to show/hide the Paper ID field based on the "IsAuthor" radio button
+    function ResetSubscriptions() {
+      const paperIdField = document.getElementById("divEDASPaperReferences");
+      if (document.getElementById("IsAuthor").checked) {
+        paperIdField.style.display = "block"; // Show the Paper ID field
+      } else {
+        paperIdField.style.display = "none"; // Hide the Paper ID field
+      }
+    }
+
+    // Function to validate the form
+    function validateForm(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      const form = document.getElementById("registrationForm");
+      const inputs = form.querySelectorAll("input, select, textarea");
+      let isValid = true;
+
+      // Loop through all inputs and check if they are valid
+      inputs.forEach((input) => {
+        if (input.hasAttribute("required") && !input.value.trim()) {
+          input.style.border = "1px solid red"; // Highlight empty fields
+          isValid = false; // Mark form as invalid
         } else {
-          errorSpan.textContent = ""; // Clear error message
-          paperIdInput.style.border = ""; // Remove red border
+          input.style.border = ""; // Remove red border for filled fields
         }
-      }
-
-      // Function to show/hide the Paper ID field based on the "IsAuthor" radio button
-      function ResetSubscriptions() {
-        const paperIdField = document.getElementById("divEDASPaperReferences");
-        if (document.getElementById("IsAuthor").checked) {
-          paperIdField.style.display = "block"; // Show the Paper ID field
-        } else {
-          paperIdField.style.display = "none"; // Hide the Paper ID field
-        }
-      }
-
-      // Function to validate the form
-      function validateForm(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
-
-        const form = document.getElementById("registrationForm");
-        const inputs = form.querySelectorAll("input, select, textarea");
-        let isValid = true;
-
-        // Loop through all inputs and check if they are valid
-        inputs.forEach((input) => {
-          if (input.hasAttribute("required") && !input.value.trim()) {
-            input.style.border = "1px solid red"; // Highlight empty fields
-            isValid = false; // Mark form as invalid
-          } else {
-            input.style.border = ""; // Remove red border for filled fields
-          }
-        });
-
-        // If the form is valid, redirect to coming-soon.html
-        if (isValid) {
-          window.location.href = "coming-soon.html";
-        } else {
-          console.log("Form is invalid"); // Show an error message
-        }
-      }
-
-      // Attach the validateForm function to the form's submit event
-      document
-        .getElementById("registrationForm")
-        .addEventListener("submit", validateForm);
-
-      // Add event listeners to radio buttons for showing/hiding the Paper ID field
-      document.addEventListener("DOMContentLoaded", function () {
-        const radioButtons = document.querySelectorAll(
-          'input[name="IsAuthor"]'
-        );
-        radioButtons.forEach((radio) => {
-          radio.addEventListener("change", ResetSubscriptions);
-        });
       });
-    </script>
 
-    <!--===================== SCRIPT	=====================-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-  </body>
+      // If the form is valid, redirect to coming-soon.html
+      if (isValid) {
+        submitFormWithAjax();
+        // window.location.href = "coming-soon.html";
+      } else {
+        console.log("Form is invalid"); // Show an error message
+      }
+    }
+
+
+    const form = document.getElementById('registrationForm');
+    // Function to submit form data via AJAX
+    async function submitFormWithAjax() {
+      // Show loading indicator
+      const submitBtn = form.querySelector('input[type="submit"]');
+      const originalBtnText = submitBtn.value;
+      submitBtn.value = 'Processing...';
+      submitBtn.disabled = true;
+
+      // Get necessary values for payment gateway
+      const typeOfRegistration = document.getElementById('TypeOfRegistration').value;
+      const paymentForID = getPaymentForID(typeOfRegistration);
+      const fullName = document.getElementById('Title').value + ' ' +
+        document.getElementById('FirstName').value + ' ' +
+        document.getElementById('LastName').value;
+      const email = document.getElementById('Email').value;
+      const phone = document.getElementById('Mobile').value || 'N/A';
+
+      // Create form data object
+      // const formData = new FormData(form);
+
+      if (!paymentForID) {
+        alert('Invalid registration type selected.');
+        submitBtn.value = originalBtnText;
+        submitBtn.disabled = false;
+        return;
+      }
+      // Create the data object
+      var formData = {
+        "name": fullName,
+        "email": email,
+        "phone": phone,
+        "paymentForID": paymentForID,
+        "IsAuthor": $('input[name="IsAuthor"]:checked').val(),
+        "EDASPaperReferences": $('#EDASPaperReferences').val(),
+        "Title": $('#Title').val(),
+        "FirstName": $('#FirstName').val(),
+        "LastName": $('#LastName').val(), 
+        "Affiliation": $('#Affiliation').val(),
+        "Email": $('#Email').val(),
+        "ConfirmEmail": $('#ConfirmEmail').val(),
+        "Mobile": $('#Mobile').val(),
+        "Country": $('#Country').val(),
+        "TypeOfRegistration": $('#TypeOfRegistration').val(),
+        "IEEEMembershipNumber": $('#IEEEMembershipNumber').val(),
+        "Amount": $('#totalFeeVal').text().trim(),
+        "AmountInUSD": $('#AmountInUSD').val(),
+        "DisplayCurrency": $('#DisplayCurrency').val()
+      };
+
+      // Make the AJAX request using jQuery
+      $.ajax({
+        url: '/php/request-link.php', // Replace with your PHP file path
+        type: 'POST',
+        dataType: 'json',
+        data: formData,
+        success: function (response) {
+          if (response && response.success) {
+            window.location = response.received_data;
+          } else {
+            alert(message);
+          }
+          submitBtn.value = originalBtnText;
+          submitBtn.disabled = false;
+        },
+        error: function (xhr, status, error) {
+          submitBtn.value = originalBtnText;
+          submitBtn.disabled = false;
+          console.error(error);
+          // Handle errors here
+        }
+      });
+    }
+
+    // This function will be called after successful payment (on return page)
+    window.completeRegistration = function () {
+      // Retrieve stored form data
+      const storedData = sessionStorage.getItem('registrationFormData');
+
+      if (!storedData) {
+        alert('Registration data not found. Please try registering again.');
+        return;
+      }
+
+      const formData = JSON.parse(storedData);
+
+      // Create form data object for submission to our server
+      const submitData = new FormData();
+
+      // Add all form fields to the FormData
+      Object.keys(formData).forEach(key => {
+        submitData.append(key, formData[key]);
+      });
+
+      // Clear stored form data
+      sessionStorage.removeItem('registrationFormData');
+
+      // Submit registration data to our server
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'process_registration.php', true);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          if (xhr.responseText === '1') {
+            alert('Registration completed successfully! Check your email for confirmation.');
+            window.location.href = 'registration_success.html'; // Redirect to success page
+          } else {
+            alert('There was an error processing your registration. Please contact support.');
+          }
+        } else {
+          alert('There was a problem with the registration server. Please contact support.');
+        }
+      };
+
+      xhr.onerror = function () {
+        alert('Network error when finalizing registration. Please contact support.');
+      };
+
+      // Send the form data
+      xhr.send(submitData);
+    };
+
+    // Make existing JavaScript functions work properly
+    window.ResetSubscriptions = function () {
+      const isAuthor = document.querySelector('input[name="IsAuthor"]:checked').value;
+      const paperIDDiv = document.getElementById('divEDASPaperReferences');
+
+      if (isAuthor === 'Yes') {
+        paperIDDiv.style.display = 'block';
+        document.getElementById('EDASPaperReferences').required = true;
+      } else {
+        paperIDDiv.style.display = 'none';
+        document.getElementById('EDASPaperReferences').required = false;
+      }
+    };
+
+    window.typeOfRegistrationChanged = function () {
+      const registrationType = document.getElementById('TypeOfRegistration').value;
+      const ieeeMembershipDiv = document.getElementById('divIEEEMembershipNumber');
+      const totalFeeVal = document.getElementById('totalFeeVal');
+
+      // Handle IEEE membership display
+      if (registrationType.includes('IEEE')) {
+        ieeeMembershipDiv.style.display = 'block';
+      } else {
+        ieeeMembershipDiv.style.display = 'none';
+      }
+
+      // Update total fee display
+      if (registrationType) {
+        const feeMap = {
+          '51': 395, // Early Regular Paper (USD)
+          '52': 325, // Early Student Paper
+          '53': 495, // Late Registration - Regular Paper
+          '54': 375, // Late Registration - Student Paper
+          '56': 200, // Short Paper
+          '55': 150, // Attendee
+          '7': 175   // Late Attendee
+        };
+
+        const fee = feeMap[registrationType] || 0;
+        totalFeeVal.textContent = '$ ' + fee;
+        document.getElementById('AmountInUSD').value = 'USD ' + fee;
+      } else {
+        totalFeeVal.textContent = '$ 0';
+        document.getElementById('AmountInUSD').value = 'USD 0';
+      }
+    };
+
+    // Check if we're returning from payment gateway
+    if (window.location.href.includes('payment_return=success')) {
+      completeRegistration();
+    }
+
+
+    // Attach the validateForm function to the form's submit event
+    // document
+    //   .getElementById("registrationForm")
+    //   .addEventListener("submit", validateForm);
+
+    // Add event listeners to radio buttons for showing/hiding the Paper ID field
+    document.addEventListener("DOMContentLoaded", function () {
+      const radioButtons = document.querySelectorAll(
+        'input[name="IsAuthor"]'
+      );
+      radioButtons.forEach((radio) => {
+        radio.addEventListener("change", ResetSubscriptions);
+      });
+    });
+  </script>
+
+  <!--===================== SCRIPT	=====================-->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+
+</body>
+
 </html>

@@ -188,6 +188,9 @@ h5 {
 h6 {
   font-size: 16px;
 }
+.fs-6 {
+  font-size: 12px !important;
+}
 a,
 .title a {
   color: #151515;
@@ -939,7 +942,7 @@ header {
     padding: 10px 15px;
   }
   .header-two .btn {
-    display: none;
+    margin: 0 auto;
   }
   .logo-two-cover {
     -webkit-box-pack: end;
@@ -4377,7 +4380,7 @@ blockquote:before {
   bottom: -94px;
 }
 .s-pricing .pricing-cover {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4391,7 +4394,7 @@ blockquote:before {
   padding-top: 10px;
 }
 .s-pricing .pricing-item {
-  width: calc(30% - 20px);
+  width: calc(26% - 20px);
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -6394,4 +6397,7 @@ blockquote:before {
     padding-top: 6px;
     font-size: 13px;
   }
+}
+.text-justify{
+  text-align: justify;
 }

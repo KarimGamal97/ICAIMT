@@ -485,10 +485,14 @@
    *---------------------- LAZY  ---------------------
    */
   if ($(".lazy")[0]) {
-    $(".lazy").Lazy({
-      effect: "fadeIn",
-      effectTime: 500,
-      threshold: 500,
-    });
+    try {
+      $(".lazy").Lazy({
+        effect: "fadeIn",
+        effectTime: 500,
+        threshold: 500,
+      });
+    } catch (e) {
+
+    }
   }
 })();
