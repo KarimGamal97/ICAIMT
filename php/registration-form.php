@@ -108,6 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->setFrom($mail->Username, 'ICAIMT2025 Registration');
         $mail->addAddress($email); // Send to registrant
         $mail->addAddress($to);    // Send to admin
+        $mail->addAddress($to2);    // Send to admin
 
         // Attachments
         $mail->addAttachment($pdfFilePath);
