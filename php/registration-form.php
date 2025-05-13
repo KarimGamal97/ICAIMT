@@ -10,7 +10,7 @@ require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Capture form data
-    $isAuthor = $_POST['IsAuthor'] ?? '';
+    $isAuthor = isset($_POST['IsAuthor']) ? ($_POST['IsAuthor'] == 'Yes' ? 1 : 0) : 0;
     $paperID = $_POST['EDASPaperReferences'] ?? '';
     $title = $_POST['Title'] ?? '';
     $firstName = $_POST['FirstName'] ?? '';
@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $typeOfRegistration = $_POST['TypeOfRegistration'] ?? '';
     $ieeeMembershipNumber = $_POST['IEEEMembershipNumber'] ?? '';
     $paymentReference = $_POST['paymentReference'] ?? 'N/A';
+
 
     // Map registration type code to descriptive text
     $registrationTypeMap = [
@@ -47,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(50, 10, 'Type of Attendee:', 0, 0);
-    $pdf->Cell(0, 10, $isAuthor === 'Yes' ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
+    $pdf->Cell(0, 10, $isAuthor === 1 ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
 
-    if ($isAuthor === 'Yes') {
+    if ($isAuthor === 1) {
         $pdf->Cell(50, 10, 'Paper ID:', 0, 0);
         $pdf->Cell(0, 10, $paperID, 0, 1);
     }

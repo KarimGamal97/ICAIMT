@@ -17,3 +17,9 @@ $db_host = "localhost";
 $db_user = "asdtest1_ICAIMT";
 $db_pass = "~1X+1=dV{(Da";
 $db_name = "asdtest1_ICAIMT";
+
+
+// $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+// $txt = $isAuthor;
+// fwrite($myfile, $txt);
+// die();

@@ -189,9 +189,9 @@ $pdf->Ln(10);
 
 $pdf->SetFont('Arial', '', 12);
 $pdf->Cell(50, 10, 'Type of Attendee:', 0, 0);
-$pdf->Cell(0, 10, $isAuthor === 'Yes' ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
+$pdf->Cell(0, 10, $isAuthor === 1 ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
 
-if ($isAuthor === 'Yes') {
+if ($isAuthor === 1) {
     $pdf->Cell(50, 10, 'Paper ID:', 0, 0);
     $pdf->Cell(0, 10, $paperID, 0, 1);
 }

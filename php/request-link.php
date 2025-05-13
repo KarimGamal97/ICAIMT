@@ -12,6 +12,8 @@ require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
+
+
 // Create database connection
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
@@ -37,13 +39,15 @@ $data = $_POST;
 // $json = file_get_contents('php://input');
 // $data = json_decode($json, true);
 
+
+
 // Process the data
 $name = isset($data['name']) ? $data['name'] : '';
 $email = isset($data['email']) ? $data['email'] : '';
 $phone = isset($data['phone']) ? $data['phone'] : '';
 $paymentForID = isset($data['paymentForID']) ? $data['paymentForID'] : '';
 // Capture form data
-$isAuthor = isset($_POST['IsAuthor']) ? (int) $_POST['IsAuthor'] : 0;
+$isAuthor = isset($_POST['IsAuthor']) ? ($_POST['IsAuthor'] == 'Yes' ? 1 : 0) : 0;
 $paperID = isset($_POST['EDASPaperReferences']) ? sanitizeInput($_POST['EDASPaperReferences']) : '';
 $title = isset($_POST['Title']) ? sanitizeInput($_POST['Title']) : '';
 $firstName = isset($_POST['FirstName']) ? sanitizeInput($_POST['FirstName']) : '';
@@ -55,6 +59,7 @@ $country = isset($_POST['Country']) ? sanitizeInput($_POST['Country']) : '';
 $typeOfRegistration = isset($_POST['TypeOfRegistration']) ? sanitizeInput($_POST['TypeOfRegistration']) : '';
 $ieeeMembershipNumber = isset($_POST['IEEEMembershipNumber']) ? sanitizeInput($_POST['IEEEMembershipNumber']) : '';
 $paymentReference = isset($_POST['paymentReference']) ? sanitizeInput($_POST['paymentReference']) : 'N/A';
+
 
 
 // Map registration type code to descriptive text
@@ -81,9 +86,9 @@ $pdf->Ln(10);
 
 $pdf->SetFont('Arial', '', 12);
 $pdf->Cell(50, 10, 'Type of Attendee:', 0, 0);
-$pdf->Cell(0, 10, $isAuthor === 'Yes' ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
+$pdf->Cell(0, 10, $isAuthor === 1 ? 'Author with accepted Paper' : 'Non-Author Attendee', 0, 1);
 
-if ($isAuthor === 'Yes') {
+if ($isAuthor === 1) {
     $pdf->Cell(50, 10, 'Paper ID:', 0, 0);
     $pdf->Cell(0, 10, $paperID, 0, 1);
 }
